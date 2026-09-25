@@ -1,0 +1,21 @@
+{
+  "id": "pol_sec_content_us",
+  "version": 1,
+  "freshnessThresholdHours": 168,
+  "requireDirectPosting": true,
+  "requireRemoteUS": true,
+  "onUnknown": {
+    "locationEligibility": "reject",
+    "recency": "continue"
+  },
+  "excludedTitles": ["software engineer", "sales representative", "account executive", "finance manager"],
+  "rankingWeights": {
+    "titleMatch": 0.35,
+    "domainMatch": 0.25,
+    "locationMatch": 0.20,
+    "recency": 0.10,
+    "directLink": 0.10
+  },
+  "titleTerms": ["content", "lifecycle", "developer marketing", "enablement", "campaign"],
+  "domainTerms": ["security", "cybersecurity", "ai", "cloud", "devsecops", "interpretability"]
+}

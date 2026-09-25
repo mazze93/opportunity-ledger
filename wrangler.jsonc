@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "opportunity-ledger",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-25",
+  "workflows": [{
+    "name": "opportunity-ingest",
+    "binding": "INGEST",
+    "class_name": "IngestWorkflow"
+  }],
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "opportunity-ledger",
+    "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+    "migrations_dir": "migrations"
+  }],
+  "r2_buckets": [{
+    "binding": "SNAPSHOTS",
+    "bucket_name": "opportunity-ledger-snapshots"
+  }],
+  "triggers": { "crons": ["0 12 * * *"] },
+  "observability": { "enabled": true }
+}
