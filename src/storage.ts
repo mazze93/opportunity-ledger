@@ -14,7 +14,7 @@ export async function persist(db: D1Database, record: Canonical, snapshot: Snaps
   const policySha = await policyIdentity(p);
   const opportunityId = `urn:opportunity:sha256:${await sha256(canonicalJson([c.provider, c.sourceId]))}`;
   const observationId = `urn:observation:sha256:${await sha256(canonicalJson([
-    opportunityId, snapshot.rawSha256, canonicalSha, '1'
+    opportunityId, snapshot.rawSha256, canonicalSha, c.normalizerVersion
   ]))}`;
   const evaluationId = `urn:evaluation:sha256:${await sha256(canonicalJson([
     observationId, policySha, ENGINE_VERSION
@@ -33,7 +33,7 @@ export async function persist(db: D1Database, record: Canonical, snapshot: Snaps
        source_url,schema_version,normalizer_version,fetched_at,http_status,etag,last_modified)
       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`)
       .bind(observationId,opportunityId,snapshot.rawSha256,canonicalSha,snapshot.payloadRef,pointer,
-        snapshot.sourceUrl,'1','1',snapshot.fetchedAt,snapshot.httpStatus,snapshot.etag,snapshot.lastModified),
+        snapshot.sourceUrl,c.schemaVersion,c.normalizerVersion,snapshot.fetchedAt,snapshot.httpStatus,snapshot.etag,snapshot.lastModified),
     db.prepare(`INSERT OR IGNORE INTO evaluations
       (id,observation_id,policy_id,policy_version,policy_sha256,engine_version,
        disposition,score,explanation_json,evaluated_at)

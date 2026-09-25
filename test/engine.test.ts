@@ -9,7 +9,7 @@ import { evaluate } from '../src/policy';
 const policy = Policy.parse(policyFile);
 const now = '2026-09-25T12:00:00.000Z';
 const base = Canonical.parse({
-  schemaVersion:'1',provider:'ashby-postings',sourceId:'https://jobs.ashbyhq.com/example/123',
+  schemaVersion:'1',normalizerVersion:'1',provider:'ashby-postings',sourceId:'https://jobs.ashbyhq.com/example/123',
   company:'Example',title:'Security Content Strategist',locationRaw:'Remote, United States',
   locationMode:'remote',countryUS:'yes',canonicalUrl:'https://jobs.ashbyhq.com/example/123',
   descriptionText:'Cloud security and developer education',postedAt:'2026-09-24T12:00:00.000Z'

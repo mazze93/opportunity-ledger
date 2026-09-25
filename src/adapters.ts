@@ -73,7 +73,7 @@ export function parseBoard(target: Target, payload: unknown): ParsedPosting[] {
     return GH.parse(payload).jobs.map((j, i) => {
       const raw = j.location?.name ?? '';
       return { pointer: `/jobs/${i}`, canonical: Canonical.parse({
-        schemaVersion: '1', provider: t.provider, sourceId: String(j.id), company: t.company,
+        schemaVersion: '1', normalizerVersion: '1', provider: t.provider, sourceId: String(j.id), company: t.company,
         title: j.title, locationRaw: raw, locationMode: locationMode(raw), countryUS: countryUS(raw),
         canonicalUrl: j.absolute_url, descriptionText: removeMarkup(j.content ?? ''),
         postedAt: null // list updated_at is not publication time
@@ -84,7 +84,7 @@ export function parseBoard(target: Target, payload: unknown): ParsedPosting[] {
     return LEVER.parse(payload).map((j, i) => {
       const raw = [j.categories?.location, ...(j.categories?.allLocations ?? [])].filter(Boolean).join(' | ');
       return { pointer: `/${i}`, canonical: Canonical.parse({
-        schemaVersion: '1', provider: t.provider, sourceId: j.id, company: t.company,
+        schemaVersion: '1', normalizerVersion: '1', provider: t.provider, sourceId: j.id, company: t.company,
         title: j.text, locationRaw: raw, locationMode: locationMode(raw, j.workplaceType),
         countryUS: countryUS(raw, j.country), canonicalUrl: j.hostedUrl,
         descriptionText: removeMarkup(j.descriptionPlain ?? j.description ?? ''), postedAt: null
@@ -96,7 +96,7 @@ export function parseBoard(target: Target, payload: unknown): ParsedPosting[] {
     // This public API has no posting id; its job URL is the provider-supplied stable key.
     const raw = j.location ?? '';
     return [{ pointer: `/jobs/${i}`, canonical: Canonical.parse({
-      schemaVersion: '1', provider: t.provider, sourceId: j.jobUrl, company: t.company,
+      schemaVersion: '1', normalizerVersion: '1', provider: t.provider, sourceId: j.jobUrl, company: t.company,
       title: j.title, locationRaw: raw, locationMode: locationMode(raw, j.workplaceType, j.isRemote),
       countryUS: countryUS(raw, j.address?.postalAddress?.addressCountry),
       canonicalUrl: j.jobUrl, descriptionText: removeMarkup(j.descriptionPlain ?? j.descriptionHtml ?? ''),

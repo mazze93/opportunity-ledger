@@ -31,6 +31,7 @@ export type Policy = z.infer<typeof Policy>;
 
 export const Canonical = z.object({
   schemaVersion: z.literal('1'),
+  normalizerVersion: z.literal('1'),
   provider: Provider, sourceId: z.string().min(1), company: z.string().min(1),
   title: z.string().min(1), locationRaw: z.string(),
   locationMode: z.enum(['remote', 'hybrid', 'onsite', 'unknown']),
