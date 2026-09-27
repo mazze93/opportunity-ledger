@@ -51,6 +51,19 @@ test('missing publication time is explicit and cannot earn recency points', () =
   assert.deepEqual(e.features.recency, {value:0, weight:0.1, contribution:0, evidence:['postedAt:unknown']});
 });
 
+test('an open older posting remains eligible but earns no recency points', () => {
+  const e = evaluate({ ...base, postedAt:'2026-02-02T12:00:00.000Z' }, policy, now);
+  assert.equal(e.disposition, 'candidate');
+  assert.equal(e.features.recency.value, 0);
+  assert.equal(e.predicates.recency.result, 'pass');
+});
+
+test('a peripheral security mention cannot qualify an unrelated title', () => {
+  const e = evaluate({ ...base, title:'Finance Operations Analyst' }, policy, now);
+  assert.equal(e.disposition, 'reject');
+  assert.equal(e.predicates.titleRelevance.result, 'reject');
+});
+
 test('provider URL is constructed from a validated board token', () => {
   const t = Target.parse({provider:'lever-postings',board:'example',company:'Example'});
   assert.equal(boardUrl(t, 1), 'https://api.lever.co/v0/postings/example?mode=json&limit=100&skip=100');
@@ -68,6 +81,24 @@ test('Ashby keeps the original JSON pointer after hiding unlisted jobs', () => {
   assert.equal(jobs.length, 1);
   assert.equal(jobs[0].pointer, '/jobs/1');
   assert.equal(jobs[0].canonical.sourceId, 'https://jobs.ashbyhq.com/example/visible');
+});
+
+test('Ashby null fields, mixed US locations, and hybrid signal are handled conservatively', () => {
+  const t = Target.parse({provider:'ashby-postings',board:'example',company:'Example'});
+  const jobs = parseBoard(t, {jobs:[
+    {title:'AppSec Engineer',jobUrl:'https://jobs.ashbyhq.com/example/1',
+      location:'United States',isRemote:true,workplaceType:null,address:{postalAddress:{addressCountry:'United States of America'}}},
+    {title:'Technical Content Writer',jobUrl:'https://jobs.ashbyhq.com/example/2',
+      location:'Remote - USA',isRemote:true,workplaceType:'Hybrid',address:null},
+    {title:'Security Researcher',jobUrl:'https://jobs.ashbyhq.com/example/3',
+      location:'Remote - US',isRemote:null,workplaceType:null,address:null}
+  ]});
+  assert.equal(jobs[0].canonical.countryUS, 'yes');
+  assert.equal(jobs[0].canonical.locationMode, 'remote');
+  assert.equal(evaluate(jobs[0].canonical, policy, now).disposition, 'candidate');
+  assert.equal(jobs[1].canonical.locationMode, 'hybrid');
+  assert.equal(evaluate(jobs[1].canonical, policy, now).disposition, 'reject');
+  assert.equal(jobs[2].canonical.locationMode, 'remote');
 });
 
 test('Greenhouse updated_at is not misrepresented as publication time', () => {

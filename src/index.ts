@@ -2,8 +2,8 @@ import { Target } from './contracts';
 import { Policy } from './contracts';
 import { IngestWorkflow } from './workflow';
 import type { Env } from './workflow';
-import { policyIdentity } from './storage';
-import { ENGINE_VERSION } from './policy';
+import { listCandidates } from './queries';
+import { mcpHandler } from './mcp';
 import targetsFile from '../config/targets.json';
 import policyFile from '../policies/security-content-us.json';
 
@@ -41,9 +41,10 @@ async function start(env: Env, target: Target) {
 }
 
 export default {
-  async fetch(req: Request, env: Env): Promise<Response> {
+  async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     if (!authorized(req, env)) return new Response('Unauthorized', { status: 401 });
     const url = new URL(req.url);
+    if (url.pathname === '/mcp') return mcpHandler(env, targets, policy)(req, env, ctx);
     if (req.method === 'POST' && url.pathname === '/runs') {
       if (Number(req.headers.get('content-length')) > 2048) return new Response('Too large', { status: 413 });
       let input: unknown;
@@ -62,18 +63,7 @@ export default {
     }
     if (req.method === 'GET' && url.pathname === '/opportunities') {
       const limit = Math.min(100, Math.max(1, Number(url.searchParams.get('limit') ?? 30) || 30));
-      const policySha = await policyIdentity(policy);
-      const rows = await env.DB.prepare(`SELECT o.id,o.company,o.title,o.location_mode,o.canonical_url,
-        o.last_seen_at,e.disposition,e.score,e.explanation_json,b.raw_sha256,b.canonical_sha256,
-        b.raw_payload_ref,b.raw_json_pointer,b.source_url,b.fetched_at,e.policy_sha256
-        FROM opportunities o
-        JOIN observations b ON b.opportunity_id=o.id
-        JOIN evaluations e ON e.observation_id=b.id
-        WHERE b.id=(SELECT b2.id FROM observations b2 WHERE b2.opportunity_id=o.id
-          ORDER BY b2.fetched_at DESC,b2.id DESC LIMIT 1)
-        AND e.policy_sha256=? AND e.engine_version=? AND e.disposition='candidate'
-        ORDER BY e.score DESC,o.id LIMIT ?`).bind(policySha,ENGINE_VERSION,limit).all();
-      return Response.json(rows.results);
+      return Response.json(await listCandidates(env.DB, policy, limit));
     }
     return new Response('Not found', { status: 404 });
   },

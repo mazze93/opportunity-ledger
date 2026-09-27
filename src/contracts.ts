@@ -13,7 +13,7 @@ export type Target = z.infer<typeof Target>;
 export const Policy = z.object({
   id: z.string().min(1), version: z.number().int().positive(),
   freshnessThresholdHours: z.number().int().positive(),
-  requireDirectPosting: z.boolean(), requireRemoteUS: z.boolean(),
+  requireDirectPosting: z.boolean(), requireRemoteUS: z.boolean(), requireTitleMatch: z.boolean(),
   onUnknown: z.object({
     locationEligibility: z.enum(['reject', 'unknown']),
     recency: z.enum(['reject', 'continue', 'unknown'])

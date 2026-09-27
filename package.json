@@ -13,6 +13,8 @@
     "db:remote": "wrangler d1 migrations apply opportunity-ledger --remote"
   },
   "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "agents": "^0.24.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {

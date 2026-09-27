@@ -15,10 +15,10 @@ const LEVER = z.array(z.object({
 }).passthrough());
 const ASHBY = z.object({ jobs: z.array(z.object({
   title: z.string(), location: z.string().optional(),
-  jobUrl: z.string().url(), isListed: z.boolean().optional(), isRemote: z.boolean().optional(),
-  workplaceType: z.string().optional(), descriptionPlain: z.string().optional(),
-  descriptionHtml: z.string().optional(), publishedAt: z.string().optional(),
-  address: z.object({ postalAddress: z.object({ addressCountry: z.string().optional() }).passthrough().optional() }).passthrough().optional()
+  jobUrl: z.string().url(), isListed: z.boolean().nullish(), isRemote: z.boolean().nullish(),
+  workplaceType: z.string().nullish(), descriptionPlain: z.string().nullish(),
+  descriptionHtml: z.string().nullish(), publishedAt: z.string().nullish(),
+  address: z.object({ postalAddress: z.object({ addressCountry: z.string().nullish() }).passthrough().nullish() }).passthrough().nullish()
 }).passthrough()) }).passthrough();
 
 const HOSTS = {
@@ -42,24 +42,25 @@ export function boardUrl(target: Target, page = 0): string {
   return url;
 }
 
-function locationMode(raw: string, declared?: string, remote?: boolean): Canonical['locationMode'] {
+function locationMode(raw: string, declared?: string | null, remote?: boolean | null): Canonical['locationMode'] {
   const v = declared?.toLowerCase();
-  if (v === 'remote' || remote === true || /\bremote\b/i.test(raw)) return 'remote';
   if (v === 'hybrid' || /\bhybrid\b/i.test(raw)) return 'hybrid';
+  if (v === 'remote' || /\bremote\b/i.test(raw)) return 'remote';
   if (v === 'onsite' || v === 'on-site' || remote === false) return 'onsite';
+  if (remote === true) return 'remote';
   return 'unknown';
 }
 
 function countryUS(raw: string, code?: string | null): Canonical['countryUS'] {
   const c = code?.toUpperCase();
-  if (c === 'US' || c === 'USA') return 'yes';
-  if (c && c !== 'US' && c !== 'USA') return 'no';
+  if (c && /(?:^|[;,/|])\s*(?:US|USA|UNITED STATES(?: OF AMERICA)?)\s*(?:$|[;,/|])/.test(c)) return 'yes';
+  if (c) return 'no';
   if (/\b(?:US|USA|U\.S\.|United States|America)\b/i.test(raw)) return 'yes';
   if (/\b(?:EMEA|LATAM|APAC|Europe|India|Canada|UK|United Kingdom|Australia)\b/i.test(raw)) return 'no';
   return 'unknown';
 }
 
-function postedDate(input?: string): string | null {
+function postedDate(input?: string | null): string | null {
   if (!input) return null;
   const d = new Date(input);
   return Number.isNaN(d.getTime()) ? null : d.toISOString();

@@ -1,6 +1,6 @@
 import { Canonical, Evaluation, Feature, Policy, Predicate } from './contracts';
 
-export const ENGINE_VERSION = '0.1.0';
+export const ENGINE_VERSION = '0.2.0';
 const pass = (evidence: string[]): Predicate => ({ result: 'pass', evidence });
 const reject = (reason: string, evidence: string[]): Predicate => ({ result: 'reject', reason, evidence });
 const unknown = (reason: string, evidence: string[]): Predicate => ({ result: 'unknown', reason, evidence });
@@ -15,8 +15,12 @@ export function evaluate(record: Canonical, policy: Policy, now: string): Evalua
   const clock = Date.parse(now);
   if (!Number.isFinite(clock)) throw new Error('invalid evaluation clock');
   const excluded = matchedTerms(c.title, p.excludedTitles);
+  const title = matchedTerms(c.title, p.titleTerms);
   const predicates: Record<string, Predicate> = {
     title: excluded.length ? reject('excluded title', excluded.map(t => `title:${t}`)) : pass(['title:allowed']),
+    titleRelevance: p.requireTitleMatch && !title.length
+      ? reject('title outside search tracks', [`title:${c.title}`])
+      : pass(title.map(t => `title:${t}`)),
     directPosting: p.requireDirectPosting && !c.canonicalUrl.startsWith('https://')
       ? reject('HTTPS direct posting required', ['canonicalUrl:non-https']) : pass(['canonicalUrl:provider']),
     locationEligibility: !p.requireRemoteUS ? pass(['policy:any-location'])
@@ -36,16 +40,14 @@ export function evaluate(record: Canonical, policy: Policy, now: string): Evalua
   } else {
     const age = clock - Date.parse(c.postedAt);
     predicates.recency = age < -3_600_000 ? unknown('future publication date', [`postedAt:${c.postedAt}`])
-      : age > p.freshnessThresholdHours * 3_600_000
-        ? reject('posting older than threshold', [`postedAt:${c.postedAt}`])
-        : pass([`postedAt:${c.postedAt}`]);
+      : pass([`postedAt:${c.postedAt}`, age > p.freshnessThresholdHours * 3_600_000
+        ? 'recency:older-than-scoring-window' : 'recency:within-scoring-window']);
   }
   if (Object.values(predicates).some(x => x.result === 'reject'))
     return { disposition: 'reject', score: null, predicates, features: {} };
   if (Object.values(predicates).some(x => x.result === 'unknown'))
     return { disposition: 'unknown', score: null, predicates, features: {} };
 
-  const title = matchedTerms(c.title, p.titleTerms);
   const domain = matchedTerms(`${c.title} ${c.descriptionText}`, p.domainTerms);
   const features: Record<string, Feature> = {};
   function add(name: string, value: number, weight: number, evidence: string[]) {
