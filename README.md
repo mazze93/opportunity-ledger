@@ -58,7 +58,9 @@ npm run build
    npm run deploy
    ```
 
-   No deployment is run by CI. Scheduled ingestion starts at 12:00 UTC every day for registered boards. Do not add boards until you intend to fetch them.
+   The verification workflow does not deploy; the deployment workflow runs only when manually dispatched. Scheduled ingestion starts at 12:00 UTC every day for registered boards.
+
+   An alternative manual GitHub Actions deployment is available under **Actions → Deploy Opportunity Ledger → Run workflow**. It requires repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `LEDGER_TOKEN` (32+ characters); repository variables `D1_DATABASE_ID` and `WORKER_BASE_URL` (the exact `https://opportunity-ledger.<your-subdomain>.workers.dev` origin); and an existing R2 bucket named `opportunity-ledger-snapshots`. It runs checks, applies the remote migration, deploys, sets the Worker secret, and checks live authentication. Do not copy credentials into a public file or commit them. The gateway repository's Actions secrets are not automatically shared with this repository.
 
 ## API
 
