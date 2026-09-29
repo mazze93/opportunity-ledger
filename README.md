@@ -2,7 +2,7 @@
 
 A deterministic, evidence-backed index of direct ATS job postings. Agents may query results and draft from them. They do not fetch arbitrary URLs, decide eligibility, or assign scores.
 
-**Status:** ingestion and read-only query/MCP service. No application or messaging endpoint exists. Deployment requires your Cloudflare D1/R2 resources and a secret. Four verified Ashby boards are registered as an initial search map.
+**Status:** ingestion and read-only query/MCP service. No application or messaging endpoint exists. The deployment workflow provisions Cloudflare D1/R2 and verifies live ingestion and MCP. Account credentials are required. Four verified Ashby boards are registered as an initial search map.
 
 ## Pipeline
 
@@ -22,10 +22,10 @@ Requires Node 24+.
 npm ci
 npm run check
 npm test
-npm run build
+npm run test:runtime
 ```
 
-`build` is a dry run. It does not deploy anything.
+`test:runtime` bundles without deploying and exercises Workers, D1, R2, Workflow ingestion, and MCP using a fixed ATS fixture. `build` is also a dry run. Neither command deploys anything.
 
 ## Configure and deploy
 
@@ -41,26 +41,34 @@ npm run build
 
    Board names, not caller-provided URLs, are accepted. Lever EU boards are not yet supported. OpenAI's Ashby feed was 13.8 MB at the initial check, above the service's 4 MB response cap; it is not registered until large-board ingestion is implemented.
 
-2. Provision resources and copy the D1 ID into `wrangler.jsonc`:
+2. In **GitHub → Settings → Secrets and variables → Actions**, add these repository secrets:
+
+   | Secret | Value |
+   |---|---|
+   | `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID |
+   | `CLOUDFLARE_API_TOKEN` | An account-scoped deployment token with Workers Scripts, D1, and Workers R2 Storage write permissions |
+   | `LEDGER_TOKEN` | A new random bearer token of at least 32 characters |
+
+   Keep credentials out of chat, source files, and commits. The gateway repository's Actions secrets are not automatically shared with this repository. The account must have R2 enabled and a workers.dev subdomain configured.
+
+3. Open **Actions → Deploy Opportunity Ledger → Run workflow** on `main`.
+
+   The workflow tests the service, creates or reuses `opportunity-ledger` D1 and `opportunity-ledger-snapshots` R2, discovers your workers.dev address, applies migrations, deploys, and installs the bearer secret. No repository variables or manually copied database ID are needed. It then ingests every registered board, waits for each Workflow, verifies evidence fields, and compares MCP results with the REST API. The Actions summary reports the live URL and job counts. An upstream feed failure makes verification fail rather than claiming success.
+
+   Scheduled ingestion starts at 12:00 UTC every day. Deployments are serialized and must be manually dispatched; the ordinary Verify workflow does not publish.
+
+   For a local deployment, supply the same three values securely as environment variables, then run:
 
    ```sh
-   npx wrangler d1 create opportunity-ledger
-   npx wrangler r2 bucket create opportunity-ledger-snapshots
-   npx wrangler secret put LEDGER_TOKEN
-   ```
-
-   Supply a random token of at least 32 characters. Do not commit it. Limit access to the Worker and R2 bucket using your Cloudflare account controls.
-
-3. Apply the migration, then deploy:
-
-   ```sh
+   node scripts/provision.mjs
    npm run db:remote
    npm run deploy
+   printf '%s' "$LEDGER_TOKEN" | npx wrangler secret put LEDGER_TOKEN
+   # Set WORKER_BASE_URL to the URL printed by provision.mjs.
+   node scripts/verify-deployment.mjs
    ```
 
-   The verification workflow does not deploy; the deployment workflow runs only when manually dispatched. Scheduled ingestion starts at 12:00 UTC every day for registered boards.
-
-   An alternative manual GitHub Actions deployment is available under **Actions → Deploy Opportunity Ledger → Run workflow**. It requires repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `LEDGER_TOKEN` (32+ characters); repository variables `D1_DATABASE_ID` and `WORKER_BASE_URL` (the exact `https://opportunity-ledger.<your-subdomain>.workers.dev` origin); and an existing R2 bucket named `opportunity-ledger-snapshots`. It runs checks, applies the remote migration, deploys, sets the Worker secret, and checks live authentication. Do not copy credentials into a public file or commit them. The gateway repository's Actions secrets are not automatically shared with this repository.
+   `provision.mjs` writes the real D1 binding into your local `wrangler.jsonc`; review that change before committing. The API fails closed until the bearer secret is installed.
 
 ## API
 
