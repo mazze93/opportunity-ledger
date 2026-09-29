@@ -55,7 +55,7 @@ npm run test:runtime
 
    The workflow tests the service, creates or reuses `opportunity-ledger` D1 and `opportunity-ledger-snapshots` R2, discovers your workers.dev address, applies migrations, deploys, and installs the bearer secret. No repository variables or manually copied database ID are needed. It then ingests every registered board, waits for each Workflow, verifies evidence fields, and compares MCP results with the REST API. The Actions summary reports the live URL and job counts. An upstream feed failure makes verification fail rather than claiming success.
 
-   Scheduled ingestion starts at 12:00 UTC every day. Deployments are serialized and must be manually dispatched; the ordinary Verify workflow does not publish.
+   Scheduled ingestion starts at 12:00 UTC every day. Deployments are serialized. Run them manually or push the release commit to the `deploy/cloudflare` branch; pushing `main` only runs Verify and does not publish.
 
    For a local deployment, supply the same three values securely as environment variables, then run:
 
