@@ -109,3 +109,41 @@ test('Greenhouse updated_at is not misrepresented as publication time', () => {
   assert.equal(canonical.postedAt, null);
   assert.equal(canonical.descriptionText, 'Security');
 });
+
+const local = (locationRaw: string, locationMode: Canonical['locationMode'], countryUS: Canonical['countryUS'] = 'unknown') =>
+  evaluate({ ...base, locationRaw, locationMode, countryUS }, policy, now);
+
+test('hybrid and onsite roles in a named local area are candidates with area evidence', () => {
+  for (const [raw, mode] of [['Raleigh, NC', 'hybrid'], ['Durham, North Carolina', 'onsite'], ['Research Triangle Park, NC', 'hybrid']] as const) {
+    const e = local(raw, mode);
+    assert.equal(e.disposition, 'candidate', raw);
+    assert.equal(e.predicates.locationEligibility.result, 'pass');
+    assert.equal(e.features.locationMatch.value, 1);
+    assert.ok(e.features.locationMatch.evidence.some(x => x.startsWith('localArea:')), raw);
+  }
+});
+
+test('a local listing with no stated work mode qualifies and records the unknown mode', () => {
+  const e = local('Chapel Hill, NC', 'unknown');
+  assert.equal(e.disposition, 'candidate');
+  assert.deepEqual(e.predicates.locationEligibility.evidence, ['locationMode:unknown', 'localArea:Chapel Hill']);
+});
+
+test('hybrid or onsite roles outside the local areas are rejected', () => {
+  const e = local('San Francisco, CA', 'hybrid', 'yes');
+  assert.equal(e.disposition, 'reject');
+  assert.equal(e.predicates.locationEligibility.result, 'reject');
+  assert.equal((e.predicates.locationEligibility as { reason: string }).reason, 'outside local areas');
+});
+
+test('area names match whole words only, and an explicit non-US country still rejects', () => {
+  assert.equal(local('Caryville, TN', 'onsite').disposition, 'reject');
+  assert.equal(local('Durhamshire', 'onsite').disposition, 'reject');
+  assert.equal(local('Durham, United Kingdom', 'onsite', 'no').disposition, 'reject');
+});
+
+test('remote US behaviour is unchanged by the local-area route', () => {
+  assert.equal(local('Remote', 'remote').disposition, 'reject');
+  assert.equal(local('Remote, Canada', 'remote', 'no').disposition, 'reject');
+  assert.equal(local('Remote - Durham, NC', 'remote').disposition, 'candidate');
+});

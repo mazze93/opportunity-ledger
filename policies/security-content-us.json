@@ -1,6 +1,6 @@
 {
   "id": "pol_sec_content_us",
-  "version": 2,
+  "version": 3,
   "freshnessThresholdHours": 168,
   "requireDirectPosting": true,
   "requireRemoteUS": true,
@@ -9,14 +9,57 @@
     "locationEligibility": "reject",
     "recency": "continue"
   },
-  "excludedTitles": ["software engineer", "sales representative", "account executive", "finance manager"],
+  "localAreas": [
+    "Durham",
+    "Raleigh",
+    "Chapel Hill",
+    "Carrboro",
+    "Hillsborough",
+    "Morrisville",
+    "Cary",
+    "Research Triangle",
+    "RTP"
+  ],
+  "localModes": [
+    "hybrid",
+    "onsite",
+    "unknown"
+  ],
+  "excludedTitles": [
+    "software engineer",
+    "sales representative",
+    "account executive",
+    "finance manager"
+  ],
   "rankingWeights": {
     "titleMatch": 0.35,
     "domainMatch": 0.25,
-    "locationMatch": 0.20,
-    "recency": 0.10,
-    "directLink": 0.10
+    "locationMatch": 0.2,
+    "recency": 0.1,
+    "directLink": 0.1
   },
-  "titleTerms": ["content", "technical writer", "documentation", "developer education", "developer advocate", "security researcher", "vulnerability researcher", "red team", "appsec", "application security", "penetration test", "threat research", "security engineer", "product marketing"],
-  "domainTerms": ["security", "cybersecurity", "ai", "cloud", "devsecops", "interpretability"]
+  "titleTerms": [
+    "content",
+    "technical writer",
+    "documentation",
+    "developer education",
+    "developer advocate",
+    "security researcher",
+    "vulnerability researcher",
+    "red team",
+    "appsec",
+    "application security",
+    "penetration test",
+    "threat research",
+    "security engineer",
+    "product marketing"
+  ],
+  "domainTerms": [
+    "security",
+    "cybersecurity",
+    "ai",
+    "cloud",
+    "devsecops",
+    "interpretability"
+  ]
 }

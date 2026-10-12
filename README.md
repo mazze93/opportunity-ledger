@@ -9,7 +9,7 @@ A deterministic, evidence-backed index of direct ATS job postings. Agents may qu
 1. Register a provider board in `config/targets.json` (curated target discovery). The initial registry includes Semgrep, AfterQuery, Theori, and Socure; their public feeds were checked on 2026-09-27.
 2. Fetch the provider's public JSON feed through a fixed adapter URL; cap time, bytes, items, pages, redirects, and response type.
 3. Save exact response bytes in R2 under their SHA-256 digest. Normalize each listing and hash its RFC 8785 canonical JSON projection.
-4. Apply three-valued hard predicates. Unknown location eligibility is rejected by the bundled strict US remote policy. An older *still listed* posting remains eligible, but earns no recency points; a title outside the declared tracks is rejected.
+4. Apply three-valued hard predicates. A posting is location-eligible if it is remote and explicitly US, or if its location names one of the policy's `localAreas` (whole-word match) in an allowed `localModes` mode (hybrid, onsite or unstated). Unresolved remote eligibility is still rejected. An older *still listed* posting remains eligible, but earns no recency points; a title outside the declared tracks is rejected.
 5. Emit deterministic weighted features with evidence, and persist the opportunity, observation, and evaluation separately in D1.
 
 Every result includes `raw_sha256`, `canonical_sha256`, the R2 key, an exact JSON pointer, fetch time, source URL, policy digest, and feature explanation. The raw digest covers a **whole feed response**, not individual posting bytes; the pointer identifies the posting within that exact response. The canonical digest covers a single normalized posting.
@@ -90,7 +90,7 @@ The service does not submit applications or send messages. If those actions are 
 ## Limits and honest claims
 
 - A hard filter is reproducible **relative to observed metadata and the exact policy**. It cannot guarantee no false positives when providers omit or misstate location/eligibility.
-- The strict sample policy is for US remote security/content work and is deliberately conservative about ambiguous location. It does not include hybrid or onsite roles, and does not establish any person's legal work eligibility.
+- The sample policy (v3) covers US remote security/content work plus hybrid and onsite roles in the Research Triangle. Local areas are matched as whole words in the raw location string only, so a same-named place elsewhere (for example Durham, England) can pass if the feed omits its country. Human review catches these. The policy does not establish any person's legal work eligibility.
 - Greenhouse's list `updated_at` is not a publication timestamp; Lever list publication time is not reliably specified. Missing posting dates may pass with zero recency points. Ashby's `publishedAt` is used as a publication signal.
 - No automatic closure inference exists yet. A missing posting in a feed does not set `status=closed`; `last_seen_at` records sightings.
 - The 4 MB response limit, 1,000 item cap, and 10-page Lever cap fail the run instead of silently declaring a partial feed complete.

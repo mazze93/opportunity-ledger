@@ -7,9 +7,9 @@ This is the first search map, not a claim that these are the only relevant emplo
 | `semgrep` | security research | Senior/Staff Security Researcher, Remote US |
 | `afterquery` | technical content | Technical Content Writer (Contract), US Remote |
 | `Theori` | vulnerability research | AppSec Engineer, US/Canada Remote |
-| `socure` | security/content watch | No candidate under the strict remote policy at the initial check; retained for future openings |
+| `socure` | security/content watch | No candidate under the strict remote policy (v2) at the initial check; retained for future openings |
 
-The policy requires an explicit US remote signal and a title match for security research, application security, technical writing, content, developer education, or product marketing. Hybrid roles are rejected even when another field says remote. A posting's old publication date affects rank, not eligibility, while the provider still lists it. Human review should confirm scope, seniority, pay, and application requirements; [the application loop](application-loop.md) covers that review and what follows it.
+The policy (v3) requires a title match for security research, application security, technical writing, content, developer education, or product marketing. On location, it accepts either an explicit US remote signal, or a hybrid, onsite or unstated-mode role in a listed Research Triangle area (Durham, Raleigh, Chapel Hill, Carrboro, Hillsborough, Morrisville, Cary, Research Triangle, RTP). Hybrid or onsite roles elsewhere are rejected. Edit `localAreas` and bump `version` to change the radius. A posting's old publication date affects rank, not eligibility, while the provider still lists it. Human review should confirm scope, seniority, pay, and application requirements; [the application loop](application-loop.md) covers that review and what follows it.
 
 ## MCP surface
 

@@ -18,6 +18,10 @@ export const Policy = z.object({
     locationEligibility: z.enum(['reject', 'unknown']),
     recency: z.enum(['reject', 'continue', 'unknown'])
   }).strict(),
+  // Hybrid/onsite/unspecified roles qualify only when locationRaw names one of
+  // these areas (whole-word, case-insensitive) and the mode is listed below.
+  localAreas: z.array(z.string().trim().min(2)).max(50),
+  localModes: z.array(z.enum(['hybrid', 'onsite', 'unknown'])),
   excludedTitles: z.array(z.string().min(1)),
   rankingWeights: z.object({
     titleMatch: z.number().min(0).max(1), domainMatch: z.number().min(0).max(1),
