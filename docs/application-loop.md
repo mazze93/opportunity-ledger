@@ -1,6 +1,6 @@
 # Application loop
 
-**Version:** 1.0.0 · **Status:** human-run playbook (no code path)
+**Version:** 1.1.0 · **Status:** human-run playbook (no code path)
 
 The ledger answers *which postings are worth a look*. This loop answers *how to turn one candidate into a tailored application without overstating anything*. It begins where `list_opportunities` stops and keeps the ledger's trust boundary: an agent may **draft**, but a human reviews, submits and sends.
 
@@ -83,6 +83,29 @@ The real bank holds personal history, so it lives **outside this public reposito
 `opportunity_id | canonical_sha256 | company | title | lane | human_fit | connection | applied_at | warm_touch | stage | outcome | post_mortem`
 
 `opportunity_id` and `canonical_sha256` tie each application back to the exact observation and policy that surfaced it. Keep the filled tracker private as well.
+
+## Rendering
+
+Keep each application as one private JSON file (contact, resume, letter). Then render the pair:
+
+```sh
+node scripts/render-application.mjs ~/private/applications/<slug>.json ~/private/applications/
+```
+
+The script validates required fields and fails loudly if any are missing. It writes `<slug>.resume.docx` and `<slug>.cover-letter.docx`. Before sending, check the page count of the rendered resume, for example by converting it to PDF.
+
+## Running the ledger locally
+
+Until the Cloudflare deployment is configured, run the full pipeline with `wrangler dev` (local D1, R2 and Workflows, with live public feeds):
+
+```sh
+npm run db:local
+printf 'LEDGER_TOKEN=%s\n' "$(openssl rand -hex 24)" > .dev.vars   # gitignored
+npx wrangler dev --port 8787 &
+# for each board in config/targets.json:
+curl -X POST localhost:8787/runs -H "Authorization: Bearer $TOKEN" -d '{"provider":"ashby-postings","board":"<board>"}'
+curl "localhost:8787/opportunities?limit=100" -H "Authorization: Bearer $TOKEN"
+```
 
 ## Drafting prompt
 
