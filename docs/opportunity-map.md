@@ -9,7 +9,7 @@ This is the first search map, not a claim that these are the only relevant emplo
 | `Theori` | vulnerability research | AppSec Engineer, US/Canada Remote |
 | `socure` | security/content watch | No candidate under the strict remote policy at the initial check; retained for future openings |
 
-The policy requires an explicit US remote signal and a title match for security research, application security, technical writing, content, developer education, or product marketing. Hybrid roles are rejected even when another field says remote. A posting's old publication date affects rank, not eligibility, while the provider still lists it. Human review should confirm scope, seniority, pay, and application requirements.
+The policy requires an explicit US remote signal and a title match for security research, application security, technical writing, content, developer education, or product marketing. Hybrid roles are rejected even when another field says remote. A posting's old publication date affects rank, not eligibility, while the provider still lists it. Human review should confirm scope, seniority, pay, and application requirements; [the application loop](application-loop.md) covers that review and what follows it.
 
 ## MCP surface
 

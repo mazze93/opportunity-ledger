@@ -99,6 +99,10 @@ The service does not submit applications or send messages. If those actions are 
 
 See [the architecture specification](docs/architecture.md) for invariants and storage semantics.
 
+## From candidate to application
+
+The ledger stops at an evidence-backed candidate. [The application loop](docs/application-loop.md) is the human-run playbook for the next step: triage, tailoring from a sourced claim bank, a mandatory truth gate, manual submission, and a post-mortem that feeds back into the policy and target registry.
+
 ## Provider references
 
 - [Greenhouse Job Board API](https://docs.greenhouse.io/job-board.html)
