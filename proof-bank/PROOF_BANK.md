@@ -278,10 +278,11 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
   - [Pitch to Publisher](https://www.youtube.com/watch?v=rdsgB1Uoi-Q): "I'll be your host".
   - [Feedback-flow product update](https://www.youtube.com/watch?v=CzWYQMeyjTM): a colleague thanks him for the introduction.
   - Livestream with HaZ Dulull, 2023-05-26: he hosts (`link held`).
+  - [Get Hired: Breaking into the Video Game Industry as a Digital Artist](https://www.youtube.com/watch?v=gSPVU7Omat0), 2023-04-28, with Matt Wright (Bad Robot Games) and Jonathan Lloyd (CG Heroes): he hosts and moderates the panel and audience Q&A, speaking for "our team at mudstack". The full transcript (read 2026-11-14) gives no host name and names no one else as host. mudstack's blog write-up of this webinar is bylined to him (`link held`).
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Produced and hosted seven webinars". Agrees.
 - **Status:**
-  - `first-hand`: seven webinars, from his site.
-  - `verified-third-party`: four of them, each with his role shown in the recording. The other three weren't matched to a recording on 2026-11-14; mudstack's blog write-up of the Get Hired webinar (2023-04-28) is bylined to him (`link held`).
+  - `verified-third-party`: five of the seven, each in a recording on mudstack's channel.
+  - `first-hand`: the count of seven, from his site. The other two weren't matched to a recording on 2026-11-14.
 - **Roles:** DEVREL.
 
 ### D4. mudstack Content and Community Manager
