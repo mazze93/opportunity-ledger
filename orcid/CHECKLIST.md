@@ -54,9 +54,23 @@ The 11 keywords stand. Three would match the record once the works below are in:
 
 ## 5. Education and qualifications
 
-- [ ] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020.
-- [ ] **Butte College (add):** dates and award from his transcript.
-- [ ] **Distinctions (optional):** `Regents Scholar, University of California, Davis`, only with the award letter to hand. No public page shows it (proof bank R3).
+Source for this section: his LinkedIn education section (screenshot, 2026-11-14) and his site.
+
+- [ ] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020. LinkedIn shows "Bachelor of Applied Science - BASc"; his own wording is B.S., so LinkedIn may want the same fix.
+- [ ] **Butte College (add):** Psychology, 2015 to 2018.
+
+### Distinctions (ORCID: Distinctions > + Add)
+
+| Distinction | Organization | Year |
+|---|---|---|
+| Regents Scholar | University of California, Davis | (year from his records) |
+| Osher Reentry Scholarship | University of California, Davis | 2019 |
+| Cal Aggie Alumni Association Leadership Scholarship | Cal Aggie Alumni Association, UC Davis | 2018 |
+| Gerald Lewis Armour and Jane Billiou Armour Scholarship | University of California, Davis | 2018 |
+| Phi Theta Kappa Honors Scholarship | Butte College | 2017 |
+| EOPS Exceptional Contribution to Student Equity Award | Butte College | 2017 |
+
+Regents Scholar is on his site ([Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/)); the other five are on his LinkedIn education section, under the school shown.
 
 ## 6. Works
 
