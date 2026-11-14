@@ -243,6 +243,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Claim:** He produced and hosted mudstack's Clear as Mud interview series, 27 episodes, 2022 to 2023, and owned guest research, outreach, scheduling, production and distribution.
 - **Resume wording:** "Produced and hosted 27 episodes of Clear as Mud, mudstack's interview series with game, XR and creative-technology leaders (2022 to 2023)."
 - **Evidence:**
+  - Nachiket Kumar, co-founder of mudstack, in his LinkedIn recommendation on Mazze's profile (Recommendations, Received), dated 2023-12-18 and marked "Nachiket managed Mazze directly", says Mazze "was able to reach out to dozens of people we wanted to bring on our podcast and arrange for them to join us — managing the process from organizing the logistics to eventually recording, editing and releasing the episodes." This is his manager's account of the outreach, logistics, recording, editing and release. Saved as a screenshot in his private files.
   - Vani Balgam's LinkedIn post on her episode (E37, August 2023) thanks him "for the opportunity to join the podcast", and his own post resharing it says he met her at GDC and "knew immediately that I wanted her to be a guest on the Clear as Mud podcast at mudstack". Search engines don't show either post, so the evidence is his screenshot of the two (`link held`).
   - Dave Branco's LinkedIn post of 2023-05-23, on his episode (E33), says he invited Branco onto the show, and his reply thanks Branco "for coming on the podcast" (`link held`).
   - [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/), his site: "Produced and hosted seven webinars and 27 episodes of the Clear as Mud interview series; owned speaker research and outreach, scheduling, run-of-show, live production, and post-event distribution." His site is the intended source of truth for the full role and the count.
@@ -250,7 +251,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
   - [mudstack 2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA): he describes his podcast role in his own words.
 - **Date:** 2022 to 2023.
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/) (in Evidence). [/work/, item 16](https://mazzeleczzare.com/work/) words it differently: "Founded and hosted", "twenty-six-plus episodes across Spotify and Apple". **One fix for the site:** "Founded". His LinkedIn post of 2022-10-18, announcing the job, already links "our weekly podcast", so the show was running when he joined. "Produced and hosted", as on the Research Program Operations page, avoids the question.
-- **Status:** `verified-third-party`. Two guests credit him in their own posts for having them on the show (Vani Balgam, E37; Dave Branco, E33), and his site states the full role and count.
+- **Status:** `verified-third-party`. His direct manager credits him with guest outreach, logistics, recording, editing and release (Nachiket Kumar's recommendation), two guests credit him in their own posts for having them on the show (Vani Balgam, E37; Dave Branco, E33), and his site states the full role and count.
 - **Optional extra:** audio timestamps. The show's RSS feed wasn't reachable from here on 2026-11-14. It isn't in Apple's podcast directory under this name, its old Podbean site now redirects to a sign-in page, Spotify shows no transcript, and the audio hosts couldn't be reached from this workspace. If the feed URL turns up (Spotify for Creators shows it in the show settings), timestamps of "and I'm your host Mazze" can be added here.
 - **Roles:** DEVREL, WRITING.
 
@@ -289,11 +290,13 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 - **Claim:** mudstack's own blog bio called him "the Content and Community Manager at mudstack" in 2023, and he wrote bylined posts for its blog and LinkedIn articles.
 - **Resume wording:** "Content and Community Manager, mudstack (2022 to 2023)." For writing volume, say "bylined blog posts and articles"; give a number only once it's counted.
-- **Evidence:** mudstack blog posts of 2023-03-24, 2023-05-02, 2023-07-05, 2023-07-21, 2023-08-31 and 2023-09-01, and LinkedIn articles of 2023-02-02, 2023-02-09 and 2023-02-17, all bylined (`link held`). mudstack shut down on 2026-09-14 and its blog author page now redirects, so save copies of the posts before they go.
+- **Evidence:**
+  - Nachiket Kumar, co-founder of mudstack, in his LinkedIn recommendation on Mazze's profile (Recommendations, Received), dated 2023-12-18 and marked "Nachiket managed Mazze directly": "He also took over our content creation and was able to generate a healthy number of articles and interviews for our blog." Saved as a screenshot in his private files.
+  - mudstack blog posts of 2023-03-24, 2023-05-02, 2023-07-05, 2023-07-21, 2023-08-31 and 2023-09-01, and LinkedIn articles of 2023-02-02, 2023-02-09 and 2023-02-17, all bylined (`link held`). mudstack shut down on 2026-09-14 and its blog author page now redirects, so save copies of the posts before they go.
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Community and Content Manager", October 2022 to November 2023, "50+ in total". mudstack's bio says "Content and Community Manager"; his 2022-10-18 post and the March 2023 80.lv byline say "Content Writer", so the title likely changed during the job. The count is unconfirmed.
 - **Status:**
-  - `verified-third-party`: the title and the bylines (employer-published).
-  - Not yet counted: "50+ technical articles". Ten bylined pieces were found on 2026-11-14; that is what the search found, not a total.
+  - `verified-third-party`: the title and the bylines (employer-published), and that he took over mudstack's content creation (his manager's recommendation).
+  - Not yet counted: "50+ technical articles". Ten bylined pieces were found on 2026-11-14; that is what the search found, not a total. His manager's "a healthy number of articles and interviews" supports the volume but gives no number.
 - **Roles:** DEVREL, WRITING.
 
 ---
@@ -378,6 +381,14 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 - **Status:** unverified. It is listed on a draft resume, but no public link was checked. Add the link here, then use it.
 - **Roles:** WRITING.
+
+---
+
+## Reference candidates
+
+People who can speak to the work first-hand. Contact details stay in his private notes. Ask each person before listing them on an application.
+
+- **Nachiket Kumar,** co-founder of mudstack. Managed him directly (his LinkedIn recommendation, 2023-12-18). Can speak to D1, D3 and D4.
 
 ---
 
