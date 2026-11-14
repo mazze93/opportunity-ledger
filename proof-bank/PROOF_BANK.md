@@ -388,7 +388,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 People who can speak to the work first-hand. Contact details stay in his private notes. Ask each person before listing them on an application.
 
-- **Nachiket Kumar,** co-founder of mudstack. Managed him directly (his LinkedIn recommendation, 2023-12-18). Can speak to D1, D3 and D4.
+- **Nachiket Kumar,** co-founder of mudstack. Managed him directly (his LinkedIn recommendation, 2023-12-18). His recommendation covers D1 and D4.
 
 ---
 
