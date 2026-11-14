@@ -21,7 +21,7 @@ This file holds only what a stranger can check from a public link. Personal hist
 - **Status:** one of four.
   - `verified-third-party`: a source he doesn't control confirms it (GitHub Advisory Database, Snyk, a publisher's byline).
   - `verified-artifact`: his own public repository, release or site shows the thing exists and does what the wording says. It proves the work exists, not how anyone rates it.
-  - `first-hand`: his own account of his own work, stated on his site. Use it as written. Outside links that support it are listed; no outside source has to repeat it for it to stand.
+  - `first-hand`: his own account of his own work, stated on his site or his own LinkedIn profile. Use it as written. Outside links that support it are listed; no outside source has to repeat it for it to stand.
   - `unverified`: no public source confirms it. The reason is given. Don't use it until it moves up.
 - **Roles:** SEC (Security Engineer), DEVREL (Developer Relations), WRITING (technical writing and content), RESEARCH (AI evals and safety research).
 
@@ -347,7 +347,9 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Claim:** B.S. in Quantitative Psychology with a neuroscience emphasis, UC Davis, 2020.
 - **Resume wording:** "B.S., Quantitative Psychology (neuroscience emphasis), University of California, Davis, 2020." Keep this exact form. Don't write "Quantitative Psychology and Neuroscience", which reads as two majors.
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "B.S., Quantitative Psychology". Agrees. [/work/, item 21](https://mazzeleczzare.com/work/) says "Quantitative Psychology & Neuroscience", which disagrees.
-- **Status:** unverified publicly; degrees are normally confirmed by background check. Regents Scholar likewise.
+- **LinkedIn:** his Education section labels the degree "Bachelor of Applied Science - BASc, Quantitative Psychology", 2018 to 2020. A public snapshot of the profile (2026-11-05) also showed a second UC Davis entry, "Bachelor's of Science Psychometrics and Quantitative Psychology". The [UC Davis catalog](https://catalog.ucdavis.edu/departments-programs-degrees/psychology/psychology-bs/) lists the major as "Psychology, Bachelor of Science" with a Quantitative Emphasis (current catalog, read 2026-11-14; the 2020 wording may differ). "B.S." matches the catalog; "BASc" doesn't. The exact field and emphasis wording should come from his diploma or transcript, since a background check compares against those.
+- **Regents Scholar:** his LinkedIn About section says "Regents Scholar" (in the Luck Lab sentence); his site says it too. UC Davis gives the [Regents Scholarship](https://financialaid.ucdavis.edu/scholarships/campus/awards/regents) to selected first-year and third-year (transfer) students. No public recipient list was found.
+- **Status:** `first-hand` (his site and LinkedIn). No public record of the degree or the Regents award was found on 2026-11-14; both are normally confirmed by background check or transcript.
 - **Roles:** all.
 
 ---
@@ -381,6 +383,30 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 - **Status:** unverified. It is listed on a draft resume, but no public link was checked. Add the link here, then use it.
 - **Roles:** WRITING.
+
+---
+
+## 7. Education and awards
+
+### A1. UC Davis scholarships (2018 to 2019)
+
+- **Claim:** At UC Davis he received the Osher Reentry Scholarship (2019), the Cal Aggie Alumni Association Leadership Scholarship (2018) and the Gerald Lewis Armour and Jane Billiou Armour Scholarship (2018).
+- **Resume wording:** "Osher Reentry Scholar (2019); Cal Aggie Alumni Association Leadership Scholarship and Armour Scholarship (2018)."
+- **Evidence:** his LinkedIn profile, Education, UC Davis entry (Activities and societies). What each award is:
+  - [Osher Reentry Scholarship](https://trc.ucdavis.edu/services/scholarship/reentry): about eight to ten $5,000 awards a year to reentry students aged 25 to 50 with a 3.25 GPA.
+  - [CAAA Leadership Scholarship](https://alumni.ucdavis.edu/scholarships/caaa-leadership-scholarship): for entering freshmen and transfers, selected by alumni readers.
+  - The Armour scholarship is awarded through CAAA's leadership scholarship round; it appears in [CAAA's 2022-2023 winners list](https://saa.ucdavis.edu/news/meet-2022-2023-leadership-scholarship-winners).
+- **Recipient lists:** CAAA publishes winner lists for [2020-2021](https://alumni.ucdavis.edu/news/meet-our-2020-2021-leadership-scholarship-winners) and 2022-2023; no 2018-2019 list was found. No Osher recipient list was found. No page naming him as a recipient was found under either name. That is search scope, not a finding.
+- **Status:** `first-hand` (his LinkedIn).
+- **Roles:** all.
+
+### A2. Butte College awards (2017)
+
+- **Claim:** At Butte College (Psychology, 2015 to 2018) he received the Phi Theta Kappa Honors Scholarship (2017) and the EOPS Exceptional Contribution to Student Equity Award (2017).
+- **Resume wording:** "Phi Theta Kappa Honors Scholarship; EOPS Exceptional Contribution to Student Equity Award, Butte College (2017)."
+- **Evidence:** his LinkedIn profile, Education, Butte College entry. [Butte's PTK chapter page](https://www.ptk.org/chapters/beta-theta-kappa-chapter) and [EOPS page](https://www.butte.edu/student-resources/support-programs/eops/) describe the programs; neither lists recipients, and no 2017 recipient list was found under either name.
+- **Status:** `first-hand` (his LinkedIn).
+- **Roles:** all.
 
 ---
 
