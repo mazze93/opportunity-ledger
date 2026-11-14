@@ -56,7 +56,7 @@ The 11 keywords stand. Three would match the record once the works below are in:
 
 Source for this section: his LinkedIn education section (screenshot, 2026-11-14) and his site.
 
-- [ ] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020. LinkedIn shows "Bachelor of Applied Science - BASc"; his own wording is B.S., so LinkedIn may want the same fix.
+- [ ] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020. He confirmed the degree is a B.S. (2026-11-14). LinkedIn shows "Bachelor of Applied Science - BASc", so LinkedIn may want the same fix.
 - [ ] **Butte College (add):** Psychology, 2015 to 2018.
 
 ### Distinctions (ORCID: Distinctions > + Add)
