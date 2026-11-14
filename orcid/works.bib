@@ -1,0 +1,63 @@
+% ORCID import: works with no DOI route of their own.
+% Import at orcid.org: Works > + Add > Add BibTeX, choose this file,
+% tick every entry, then "Import work to your record".
+%
+% Every entry is backed by a public record (see proof-bank/PROOF_BANK.md).
+% Not in this file, on purpose:
+%   - Blog essays: Rogue Scholar registers a DOI for each one and Crossref
+%     adds it to ORCID. Importing them here too would make duplicates,
+%     because ORCID groups works only by DOI, ISBN or ISSN.
+%   - Software releases: Zenodo DOIs reach ORCID through DataCite (see
+%     CHECKLIST.md). software.bib is the fallback if you skip Zenodo.
+%   - Acknowledgements (a dissertation, a lab page): not authored works.
+%
+% After import, open each work and check its type. ORCID's help pages don't
+% say how BibTeX entry types map to work types; @misc usually lands as
+% "Other". Suggested types are in each entry's note.
+
+@misc{ghsa-52cp-r559-cp3m,
+  author       = {LeCzzare, Mazze},
+  title        = {{CVE-2026-59869}: Quadratic CPU consumption via chained merge keys in js-yaml 3.x and 4.x ({GHSA-52cp-r559-cp3m})},
+  howpublished = {GitHub Advisory Database},
+  year         = {2026},
+  month        = jul,
+  url          = {https://github.com/advisories/GHSA-52cp-r559-cp3m},
+  note         = {Credited Finder (GitHub account mazze93). Severity High, CVSS 3.1 base 7.5. Also credited by Snyk, SNYK-JS-JSYAML-17900054. ORCID type: Other.}
+}
+
+@misc{ghsa-g796-fgmg-93mv,
+  author       = {LeCzzare, Mazze},
+  title        = {{CVE-2026-59868}: Quadratic CPU consumption via merge-key chains in js-yaml 5.x ({GHSA-g796-fgmg-93mv})},
+  howpublished = {GitHub Advisory Database},
+  year         = {2026},
+  url          = {https://github.com/advisories/GHSA-g796-fgmg-93mv},
+  note         = {Credited Finder (GitHub account mazze93). Severity Moderate, CVSS 3.1 base 5.3. ORCID type: Other.}
+}
+
+@misc{ghsa-h67p-54hq-rp68,
+  author       = {LeCzzare, Mazze},
+  title        = {{CVE-2026-53550}: Repeated-alias merge-key denial of service in js-yaml ({GHSA-h67p-54hq-rp68})},
+  howpublished = {GitHub Advisory Database},
+  year         = {2026},
+  url          = {https://github.com/advisories/GHSA-h67p-54hq-rp68},
+  note         = {Credited Analyst, one of five (GitHub account mazze93); another researcher reported it. ORCID type: Other.}
+}
+
+@techreport{leczzare-intentional-fragility,
+  author       = {LeCzzare, Mazze},
+  title        = {Intentional Fragility: Accountable Forgetting in Local-First {AI}},
+  institution  = {Self-published},
+  year         = {2026},
+  url          = {https://mazzeleczzare.com/papers/intentional-fragility.pdf},
+  note         = {Self-published paper; landing page https://mazzeleczzare.com/intentional-fragility/. Not in the blog feed, so it gets no Rogue Scholar DOI. Skip this entry if you give it a Zenodo DOI instead. ORCID type: Report or Preprint.}
+}
+
+@misc{mudstack-roadmap-webinar-2022,
+  author       = {LeCzzare, Mazze},
+  title        = {mudstack 2023 roadmap webinar},
+  howpublished = {mudstack, YouTube},
+  year         = {2022},
+  month        = dec,
+  url          = {https://www.youtube.com/watch?v=UJ6ugcnTooA},
+  note         = {Host. Published 2022-12-06 on mudstack's YouTube channel. Before importing, copy the exact video title from YouTube into the title field. ORCID type: Lecture or speech.}
+}
