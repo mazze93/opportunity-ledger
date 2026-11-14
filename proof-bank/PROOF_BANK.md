@@ -17,6 +17,7 @@ This file holds only what a stranger can check from a public link. Personal hist
 - **Resume wording:** the strongest wording the evidence supports. Use it as written, or weaker. Never stronger.
 - **Evidence:** links a reader can open.
 - **Date:** when the thing happened.
+- **Site page:** his page for it on [mazzeleczzare.com](https://mazzeleczzare.com/), the intended source of truth, and whether it agrees with the outside record. A disagreement is a fix for the site or for the record, not a verdict.
 - **Status:** one of three.
   - `verified-third-party`: a source he doesn't control confirms it (GitHub Advisory Database, Snyk, a publisher's byline).
   - `verified-artifact`: his own public repository, release or site shows the thing exists and does what the wording says. It proves the work exists, not how anyone rates it.
@@ -32,6 +33,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - GitHub advisories credit the account `mazze93`.
 - Snyk credits "Mazze LeCzzare Frazer".
 - One 2023 byline is under a previous surname (see W1).
+- Several third-party sources below (a lab alumni page, a dissertation, mudstack's blog, a guest's LinkedIn post) also credit that earlier name. Until he decides whether to link sources that show it, those entries say `link held` and the links stay in his private notes. The fact is still verified; only the link is held.
 
 ---
 
@@ -47,6 +49,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [Snyk SNYK-JAVA-ORGWEBJARSNPM-17900055](https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-17900055) (WebJars repackaging, same credit)
   - [npm: js-yaml](https://www.npmjs.com/package/js-yaml) (weekly downloads shown as 386,220,519)
 - **Date:** GitHub advisory published 2026-07-02; Snyk 2026-07-09.
+- **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). Agrees.
 - **Status:** `verified-third-party`.
 - **Roles:** SEC, RESEARCH.
 
@@ -57,6 +60,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Evidence:**
   - [GHSA-g796-fgmg-93mv](https://github.com/advisories/GHSA-g796-fgmg-93mv) (credits: `mazze93`, Finder)
 - **Date:** 2026.
+- **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). Agrees (Moderate 5.3).
 - **Status:** `verified-third-party` for the GitHub credit and the Moderate rating.
   - Unverified: a Snyk credit for this CVE. No Snyk advisory page naming him was found.
   - Snyk's [js-yaml 5.1.0 package page](https://security.snyk.io/package/npm/js-yaml/5.1.0) rates a 5.x merge-key issue high, but that page carries no credit. Say "Moderate" or give no severity.
@@ -67,6 +71,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Claim:** He is one of five credited analysts on a repeated-alias merge-key denial of service that another researcher reported.
 - **Resume wording:** "Credited Analyst (one of five), CVE-2026-53550 (GHSA-h67p-54hq-rp68)."
 - **Evidence:** [GHSA-h67p-54hq-rp68](https://github.com/advisories/GHSA-h67p-54hq-rp68) (Reporter: another researcher; Analysts include `mazze93`).
+- **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). Agrees ("credited analysis contribution").
 - **Status:** `verified-third-party`.
 - **Roles:** SEC.
 
@@ -77,6 +82,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Evidence:**
   - [securepride.org](https://securepride.org)
   - [security.txt](https://securepride.org/.well-known/security.txt)
+- **Site page:** [/project/secure-pride/](https://mazzeleczzare.com/project/secure-pride/). The site gives two titles: "Founder & Exec. Director" on /work/ and "Founder & Editor-in-Chief" on [/work/research-program-operations/](https://mazzeleczzare.com/work/research-program-operations/). Pick one.
 - **Status:** `verified-artifact` that the site, security.txt and policy link exist.
   - Unverified: his name as founder or policy author. No fetched page named him. The /about and /security-policy pages did not load through the fetcher.
   - Fix: add a founder line to /about, or a credit line to the policy page.
@@ -95,6 +101,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - README: growth slopes of 1.90 (r² 0.999), 1.90 (r² 1.000) and 2.05 (r² 0.995) on js-yaml 3.15.0, 4.3.0 and 5.2.0, over 64 to 512 KiB inputs
   - The local harness ran 71 of 71 checks passing on 2026-11-14, and the `test` CI job on main passed the same day.
 - **Date:** growth scoring merged 2026-11-13.
+- **Site page:** none found. Add it to /work/ or /studio/.
 - **Status:** `verified-artifact`.
 - **Do not say:** that any model was evaluated, or any score. The README says it makes no claim about model performance.
 - **Roles:** RESEARCH, SEC.
@@ -106,6 +113,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Evidence:**
   - [mazze93/aletheia](https://github.com/mazze93/aletheia)
   - [mazze93/apatea](https://github.com/mazze93/apatea)
+- **Site page:** [/project/aletheia/](https://mazzeleczzare.com/project/aletheia/). Agrees.
 - **Status:** `verified-artifact`. No detection rates are claimed.
 - **Roles:** RESEARCH, SEC.
 
@@ -114,6 +122,7 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Claim:** He wrote a 42-page report applying the MAESTRO agentic-AI threat-modelling framework to 12 case studies, conducted in June 2026.
 - **Resume wording:** "Author, MAESTRO in Practice: a 42-page applied threat-modelling study of 12 agentic-AI case studies (self-published, 2026)."
 - **Evidence:** [mazzeleczzare.com/blog/maestro-in-practice](https://mazzeleczzare.com/blog/maestro-in-practice/).
+- **Site page:** [MAESTRO in Practice (PDF)](https://mazzeleczzare.com/papers/maestro-in-practice.pdf) and [/project/maestro/](https://mazzeleczzare.com/project/maestro/). Agrees.
 - **Status:** `verified-artifact` (self-published, not peer-reviewed).
 - **Roles:** SEC, RESEARCH, WRITING.
 
@@ -127,6 +136,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [method audit](https://research.mazzeleczzare.com/method-audit.html)
   - [mazze93/ai-behavior-research](https://github.com/mazze93/ai-behavior-research) (tag v0.1.0-rc.1)
   - [mazze93/authority-without-assertion](https://github.com/mazze93/authority-without-assertion) (pilot stage, preregistration)
+- **Site page:** [/work/, item 04](https://mazzeleczzare.com/work/). Agrees; the site itself says a smoke test is not a completed pilot.
 - **Status:** `verified-artifact`.
 - **Do not say:** "findings", "results" or "published research". There are none yet.
 - **Roles:** RESEARCH.
@@ -148,6 +158,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/github-mcp-gateway](https://github.com/mazze93/github-mcp-gateway) (tags v1.0.0, v1.1.0; CI, CodeQL, deploy and release workflows)
   - [Glama listing](https://glama.ai/mcp/servers/mazze93/github-mcp-gateway)
 - **Date:** v1.1.0 released 2026-09-13.
+- **Site page:** none found. Add it to /work/.
 - **Status:** `verified-artifact`. The Glama listing is third-party, but it only indexes the repo.
 - **Do not say:** a test count. "66 tests" no longer matches; the suite now has about 90 test call sites. Count with the test runner before using any number.
 - **Roles:** SEC, DEVREL.
@@ -160,6 +171,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/stratum](https://github.com/mazze93/stratum) (tags v0.4.0, v0.5.0)
   - [stratum.mazzeleczzare.com](https://stratum.mazzeleczzare.com/)
 - **Date:** v0.5.0 released 2026-11-13.
+- **Site page:** [/work/, item 01](https://mazzeleczzare.com/work/). Agrees.
 - **Status:** `verified-artifact`.
   - Unverified: npm (`@stratum-ledger/cli`) and Homebrew availability. The npm page did not load.
 - **Roles:** DEVREL, SEC.
@@ -175,6 +187,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/stele](https://github.com/mazze93/stele) (tags v1.0.0 to v1.2.0)
   - [stele.mazzeleczzare.com](https://stele.mazzeleczzare.com/)
 - **Date:** v1.2.0 released 2026-10-17.
+- **Site page:** [/work/, item 02](https://mazzeleczzare.com/work/) and [/project/stele/](https://mazzeleczzare.com/project/stele/). Agrees.
 - **Status:** `verified-artifact`.
 - **Roles:** SEC, RESEARCH.
 
@@ -186,6 +199,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/claude-code-skills](https://github.com/mazze93/claude-code-skills) (all commits his)
   - [store.mazzeleczzare.com](https://store.mazzeleczzare.com)
   - Install: `/plugin marketplace add mazze93/claude-code-skills`
+- **Site page:** no page on /work/ or /studio/; the store subdomain is the only page.
 - **Status:** `verified-artifact`.
 - **Do not say:** sales, revenue, users or installs. Nothing public shows them.
 - **Roles:** DEVREL, WRITING.
@@ -215,6 +229,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Claim:** He contributed to the Tennis 919 app repository with CodeQL. Another account wrote more of its commits (13 against his 9).
 - **Resume wording:** "Co-developed the Tennis 919 club app."
 - **Evidence:** [mazze93/Tennis919-app](https://github.com/mazze93/Tennis919-app).
+- **Site page:** the app has no page. [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/) lists the Tennis 919 role.
 - **Status:** `verified-artifact`.
 - **Roles:** DEVREL.
 
@@ -224,15 +239,17 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 ### D1. Clear as Mud podcast (mudstack)
 
-- **Claim:** mudstack ran a podcast called Clear as Mud from late 2022 into 2023, while he worked there.
-- **Resume wording until his role is verified:** "Produced content for mudstack's Clear as Mud podcast." Use "hosted" or an episode count only after a public source names him.
+- **Claim:** mudstack ran the Clear as Mud podcast from 2022 into August 2023. In a December 2022 mudstack webinar he says he handles "a lot of the scheduling and organization" for it.
+- **Resume wording now:** "Scheduled and organized guests for mudstack's Clear as Mud podcast, 2022 to 2023." Add "hosted" with named episodes once the episodes are confirmed (see Status).
 - **Evidence:**
-  - [Spotify: Clear as Mud](https://open.spotify.com/show/50eMqYFskikUzz4EuoYTyf) ("from the folks at mudstack"; episodes seen November 2022 to August 2023)
-  - [SoundSage listing](https://soundsage.app/podcast/x2RoJLAx/clear-as-mud/) (37 episodes in all)
+  - [mudstack 2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA) (his own words on the podcast role, on mudstack's channel)
+  - [Spotify: Clear as Mud](https://open.spotify.com/show/50eMqYFskikUzz4EuoYTyf) (37 episodes, 2022 to 2023-08-10)
+  - Dave Branco's LinkedIn post of 2023-05-23 says he invited Branco onto the show (`link held`).
+- **Site page:** [/work/, item 16](https://mazzeleczzare.com/work/) and [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/). **Disagrees with the outside record.** The site says he "founded and hosted" the show, with 26+ or 27 episodes. His own LinkedIn post announcing the job on 2022-10-18 already links "our weekly podcast", and E1 to E32 open with Graham Waltrip as host.
 - **Status:**
-  - `verified-third-party` that the show exists.
-  - Unverified: his host or producer role and the "27 episodes" figure. No public page names a host.
-  - Fix: an episode page or recording where he introduces himself.
+  - `verified-third-party`: the show, and his scheduling and organizing role.
+  - Hosting is not yet confirmed from a recording. Checked 2026-11-14: YouTube captions for E1 to E32 (E6 and E13 have none) all open with Graham Waltrip as host. Episodes 33 to 37 (Branco, Fadness, Adkins, Tucciarone, Balgam; May to August 2023) are audio only on Spotify and couldn't be played from here. This is the limit of the search, not a finding that he didn't host.
+  - Fix: name the episodes he hosted, or a timestamp where he says "I'm your host".
 - **Roles:** DEVREL, WRITING.
 
 ### D2. mudstack articles on 80.lv (team byline)
@@ -244,48 +261,86 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
   - [Pricing announcement, 2023-06-12](https://80.lv/articles/mudstack-goes-free-for-artists-simplifies-pricing-introduces-new-team-plan)
   - [Rapid-iteration piece, 2023-11-10](https://80.lv/articles/3-tips-on-rapid-iteration-for-digital-art-teams-launch-your-game-faster)
   - [Author page](https://80.lv/author/the-mudstack-team)
+- **Site page:** none. The site names only the GDC piece (W1).
 - **Status:**
   - `verified-third-party` that the pieces exist.
   - Unverified: which of them he wrote.
 - **Roles:** DEVREL, WRITING.
 
-### D3. mudstack livestream with HaZ Dulull (May 2023)
+### D3. mudstack webinars and livestream (host)
 
-- **Claim:** mudstack ran a livestream with filmmaker HaZ Dulull on 2023-05-26.
-- **Status:** unverified. The only evidence seen was a tweet mirror, and his role wasn't stated. Don't use it until there is a direct link that shows his part.
+- **Claim:** He hosted or introduced mudstack webinars from December 2022 to May 2023.
+- **Resume wording:** "Hosted mudstack's webinar and livestream series for game artists and studios (2022 to 2023), including a publisher-pitching panel, the 2023 product roadmap and a livestream with director HaZ Dulull."
+- **Evidence (mudstack's YouTube channel, captions read 2026-11-14):**
+  - [2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA): he introduces himself and hosts.
+  - [Pitch to Publisher](https://www.youtube.com/watch?v=rdsgB1Uoi-Q): "I'll be your host".
+  - [Feedback-flow product update](https://www.youtube.com/watch?v=CzWYQMeyjTM): a colleague thanks him for the introduction.
+  - Livestream with HaZ Dulull, 2023-05-26: he hosts (`link held`).
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Produced and hosted seven webinars". Four are confirmed; see Status.
+- **Status:**
+  - `verified-third-party`: four sessions, each with his role shown in the recording.
+  - Not yet confirmed: "seven webinars". The Get Hired webinar (2023-04-28) has a host who isn't named in the part of the captions read, and the Q&A sessions were run by others. mudstack's blog write-up of Get Hired is bylined to him (`link held`).
 - **Roles:** DEVREL.
+
+### D4. mudstack Content and Community Manager
+
+- **Claim:** mudstack's own blog bio called him "the Content and Community Manager at mudstack" in 2023, and he wrote bylined posts for its blog and LinkedIn articles.
+- **Resume wording:** "Content and Community Manager, mudstack (2022 to 2023)." For writing volume, say "bylined blog posts and articles"; give a number only once it's counted.
+- **Evidence:** mudstack blog posts of 2023-03-24, 2023-05-02, 2023-07-05, 2023-07-21, 2023-08-31 and 2023-09-01, and LinkedIn articles of 2023-02-02, 2023-02-09 and 2023-02-17, all bylined (`link held`). mudstack shut down on 2026-09-14 and its blog author page now redirects, so save copies of the posts before they go.
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Community and Content Manager", October 2022 to November 2023, "50+ in total". mudstack's bio says "Content and Community Manager"; his 2022-10-18 post and the March 2023 80.lv byline say "Content Writer", so the title likely changed during the job. The count is unconfirmed.
+- **Status:**
+  - `verified-third-party`: the title and the bylines (employer-published).
+  - Not yet counted: "50+ technical articles". Ten bylined pieces were found on 2026-11-14; that is what the search found, not a total.
+- **Roles:** DEVREL, WRITING.
 
 ---
 
 ## 5. Research background
 
-### R1. Research lab operations, UC Davis (2018 to 2022)
+### R1. Research lab operations, UC Davis (Luck Lab, then Bliss-Moreau Lab)
 
-- **Claim:** He worked in research operations in UC Davis psychology labs (the Luck Lab, then the Bliss-Moreau Lab) from 2018 to 2022.
-- **Resume wording:** "Research lab operations, UC Davis Department of Psychology (Luck Lab; Bliss-Moreau Lab), 2018 to 2022." Keep titles and month ranges in line with the resume-gap notes before using them.
-- **Evidence:** [mazzeleczzare.com/work/research-program-operations](https://mazzeleczzare.com/work/research-program-operations/) (self-published).
-- **Status:** unverified by any third party. No lab or university page names him.
-  - Titles and dates differ between his resumes. Settle one version from offer letters or HR records first.
+- **Claim:** He was a lab manager assistant in Steven Luck's lab and then a junior specialist (junior staff) in Eliza Bliss-Moreau's lab at UC Davis.
+- **Resume wording:** "Lab Manager Assistant, Luck Lab, UC Davis; then Junior Specialist, Bliss-Moreau Lab, UC Davis." Add month ranges only from offer letters or HR records.
+- **Evidence:**
+  - Luck Lab alumni page: "Former Lab Manager Assistant", now "Junior Specialist, Bliss-Moreau Lab, UC Davis" (`link held`).
+  - Joey A. Charbonneau, PhD dissertation, UC Davis 2024, acknowledgments (p. v): thanks him among "the many junior staff members" of the Bliss-Moreau Lab (`link held`).
+  - [mazzeleczzare.com/work/research-program-operations](https://mazzeleczzare.com/work/research-program-operations/) (self-published).
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/) matches the Bliss-Moreau junior specialist role. **Disagrees on the Luck Lab title:** the site says "Research Assistant / Laboratory Manager" there, the lab's page says "Lab Manager Assistant", and [/work/, item 21](https://mazzeleczzare.com/work/) puts "Laboratory Operations Manager (Junior Specialist)" in the Luck Lab.
+- **Status:**
+  - `verified-third-party`: both titles and both labs.
+  - Not shown: dates. The dissertation credits no specific task; its Chapter 2 author list doesn't include him, and Chapters 3 to 6 weren't in the text read.
+  - Steven Luck's public CVs (February 2022 and January 2025, read in full) don't name him. The lab's website does. If another CV version names him, add it here.
 - **Roles:** RESEARCH.
 
 ### R2. ERP Boot Camp support
 
-- **Claim:** The Luck Lab runs the ERP Boot Camp, a 10-day training funded by NIH grant R25MH080794. He says he helped run it.
-- **Resume wording:** "Supported logistics for the NIH-funded ERP Boot Camp (10-day intensive training in EEG/ERP methods)."
+- **Claim:** Steven Luck and Emily Kappenman run the UC-Davis/SDSU ERP Boot Camp, a 10-day NIH-funded workshop (R25MH080794). He says he supported it while in the Luck Lab.
+- **Resume wording:** "Supported logistics for the NIH-funded UC-Davis/SDSU ERP Boot Camp, a 10-day intensive in EEG/ERP methods for about 30 researchers per cohort." If he supported more than one cohort, say how many: "two cohorts, about 60 researchers in all".
 - **Evidence:**
-  - [erpinfo.org: ERP Boot Camp](https://erpinfo.org/the-erp-boot-camp)
-  - [erpinfo.org: application info](https://erpinfo.org/application-info) (about 30 participants accepted)
-  - [Luck Lab](https://lucklab.ucdavis.edu/)
+  - [erpinfo.org: ERP Boot Camp](https://erpinfo.org/the-erp-boot-camp): "held each year at the UC-Davis Center for Mind & Brain or at San Diego State University"
+  - [erpinfo.org: application info](https://erpinfo.org/application-info): "Only 30 participants can be accepted each year"
+  - Luck's 2022 CV lists the in-person camps: UC Davis 2007 to 2011, 2013 to 2017 and 2019; SDSU in August 2021; 2020 cancelled for COVID and replaced with virtual webinars.
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Helped coordinate the annual 10-day NIH-funded ERP Boot Camp", with cross-site coordination. Agrees with erpinfo.org. The "about 60" figure comes from a CV, not the site.
 - **Status:**
-  - `verified-third-party` that the Boot Camp, its funding and its size exist.
-  - Unverified: his role.
-- **Do not say:** "about 60 researchers annually". The public figure is about 30 (the Luck Lab page says 35).
+  - `verified-third-party`: the camp, its funding, its sites and its size.
+  - Unverified: his role, and which years.
+- **Do not say:** "about 60 researchers annually", or that it ran at San Jose State. The camp's own pages describe one 30-person camp a year, alternating between UC Davis and San Diego State.
 - **Roles:** RESEARCH, DEVREL.
+
+### R4. Counterfeit-banknote study, Luck Lab
+
+- **Claim (his site):** he ran data collection for a counterfeit-banknote ERP study and trained visiting researcher Daniel Dodgson; the site says the work is acknowledged in Dodgson & Raymond, Scientific Reports 12:2076 (2022).
+- **Site page:** [/work/, item 18](https://mazzeleczzare.com/work/). **Disagrees with the paper.**
+- **Evidence:** [Dodgson & Raymond 2022](https://doi.org/10.1038/s41598-022-05972-8). Its acknowledgements thank only the Bank of Canada, the Bank of England, the Reserve Bank of Australia and the US Federal Reserve. Its participants were 26 University of Birmingham students. ERPLAB is cited as software, with no individual credit.
+- **Status:** unverified. The paper doesn't name him. That doesn't show the work didn't happen; it may belong to another paper or an unpublished UC Davis arm of the study.
+  - Fix: the record that does name him, or rewording the site so it doesn't point to this paper.
+- **Roles:** RESEARCH, SEC.
 
 ### R3. Degree
 
 - **Claim:** B.S. in Quantitative Psychology with a neuroscience emphasis, UC Davis, 2020.
 - **Resume wording:** "B.S., Quantitative Psychology (neuroscience emphasis), University of California, Davis, 2020." Keep this exact form. Don't write "Quantitative Psychology and Neuroscience", which reads as two majors.
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "B.S., Quantitative Psychology". Agrees. [/work/, item 21](https://mazzeleczzare.com/work/) says "Quantitative Psychology & Neuroscience", which disagrees.
 - **Status:** unverified publicly; degrees are normally confirmed by background check. Regents Scholar likewise.
 - **Roles:** all.
 
@@ -298,6 +353,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Claim:** He wrote an 80.lv article on networking at GDC 2023, bylined to him under a previous surname as a content writer at mudstack.
 - **Resume wording:** "'Networking at GDC 2023: Tips for Artists, Game Developers, and Industry Leaders,' 80.lv, March 2023 (bylined under a previous surname)."
 - **Evidence:** [80.lv article, 2023-03-15](https://80.lv/articles/networking-at-gdc-2023-tips-for-artists-game-developers-and-industry-leaders).
+- **Site page:** [/work/, item 15](https://mazzeleczzare.com/work/). Agrees.
 - **Status:** `verified-third-party`.
 - **Roles:** WRITING, DEVREL.
 
@@ -311,6 +367,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
   - "What We Don't Know Yet"
 - **Resume wording:** "Technical essays and white papers on AI security and evaluation at mazzeleczzare.com/writing." Name one or two pieces, each with its link.
 - **Evidence:** [mazzeleczzare.com/writing](https://mazzeleczzare.com/writing/). The [/work](https://mazzeleczzare.com/work/) page already tiers his own claims as Live, Published, Acknowledged or Self-reported.
+- **Site page:** [/writing/](https://mazzeleczzare.com/writing/). This is the page.
 - **Status:** `verified-artifact` (self-published).
 - **Roles:** WRITING, DEVREL, RESEARCH.
 
@@ -342,6 +399,8 @@ These may be true. Only private records show them, so this public file doesn't l
 - **Forks as his work:** arxiv-auth, obsidian-minimal, and the Zed extensions fork. A Zed theme of his counts only once the upstream merge is checked.
 - **kintsugi or macprobe as public projects.** No public repositories by those names exist.
 - **Sales, revenue, installs or users** for the skills store or any tool.
-- **"Hosted 27 episodes" or "seven webinars"** until a public page names him.
-- **"About 60 researchers annually"** for the ERP Boot Camp.
+- **"Hosted 27 episodes" or "seven webinars"** until the episodes and sessions are named (see D1 and D3). "Hosted mudstack webinars" is fine now.
+- **"About 60 researchers annually"** or a San Jose State site for the ERP Boot Camp (see R2).
+- **"Acknowledged in Scientific Reports 12:2076"** (see R4).
+- **ERPLAB contributor** until a public record (release notes, commit, acknowledgement) names him. His site marks it self-reported.
 - **Any title he didn't hold.** Check every template header and footer before sending.
