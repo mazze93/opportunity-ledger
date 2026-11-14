@@ -309,6 +309,7 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Resume wording:** "Lab Manager Assistant, Luck Lab, UC Davis; then Junior Specialist, Bliss-Moreau Lab, UC Davis." Add month ranges only from offer letters or HR records.
 - **Evidence:**
   - Luck Lab alumni page: "Former Lab Manager Assistant", now "Junior Specialist, Bliss-Moreau Lab, UC Davis" (`link held`).
+  - His LinkedIn profile, Education, UC Davis entry: "Senior Research Assistant and Assistant Lab Manager in the Laboratory for Basic and Translational Neuroscience under the mentorship of Dr. John Kiat and Dr. Steve Luck." This agrees with the lab's own "Lab Manager Assistant".
   - Joey A. Charbonneau, PhD dissertation, UC Davis 2024, acknowledgments (p. v): thanks him among "the many junior staff members" of the Bliss-Moreau Lab (`link held`).
   - [mazzeleczzare.com/work/research-program-operations](https://mazzeleczzare.com/work/research-program-operations/) (self-published).
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/) matches the Bliss-Moreau junior specialist role. **Disagrees on the Luck Lab title:** the site says "Research Assistant / Laboratory Manager" there, the lab's page says "Lab Manager Assistant", and [/work/, item 21](https://mazzeleczzare.com/work/) puts "Laboratory Operations Manager (Junior Specialist)" in the Luck Lab.
@@ -333,23 +334,48 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 - **Do not say:** "about 60 researchers annually", or that it ran at San Jose State. The camp's own pages describe one 30-person camp a year, alternating between UC Davis and San Diego State.
 - **Roles:** RESEARCH, DEVREL.
 
-### R4. Counterfeit-banknote study, Luck Lab
+### R4. Counterfeit-banknote study (CogNote Project)
 
-- **Claim (his site):** he ran data collection for a counterfeit-banknote ERP study and trained visiting researcher Daniel Dodgson; the site says the work is acknowledged in Dodgson & Raymond, Scientific Reports 12:2076 (2022).
-- **Site page:** [/work/, item 18](https://mazzeleczzare.com/work/). **Disagrees with the paper.**
-- **Evidence:** [Dodgson & Raymond 2022](https://doi.org/10.1038/s41598-022-05972-8). Its acknowledgements thank only the Bank of Canada, the Bank of England, the Reserve Bank of Australia and the US Federal Reserve. Its participants were 26 University of Birmingham students. ERPLAB is cited as software, with no individual credit.
-- **Status:** unverified. The paper doesn't name him. That doesn't show the work didn't happen; it may belong to another paper or an unpublished UC Davis arm of the study.
-  - Fix: the record that does name him, or rewording the site so it doesn't point to this paper.
+- **Claim (his LinkedIn, his words):** "I contributed my eye-tracking and biobehavioral research expertise to an international study on counterfeit bill identification for the Federal Reserve, the Bank of Canada, England, and Australia."
+- **Resume wording:** "Contributed eye-tracking and biobehavioral research expertise to an international study of counterfeit banknote identification for the US Federal Reserve and the central banks of Canada, England and Australia."
+- **Evidence:**
+  - The study is the CogNote Project. The Four Nations Group of central banks (Federal Reserve Board, Bank of Canada, Reserve Bank of Australia, Bank of England) commissioned it in 2018 from Jane Raymond at the University of Birmingham. It ran in four countries, including the United States, and measured eye movements and brain activity ([Four Nations Group, Keesing Platform, Part 1](https://platform.keesingtechnologies.com/detecting-counterfeit-money-in-the-blink-of-an-eye-part-1/), [Part 2](https://platform.keesingtechnologies.com/detecting-counterfeit-money-in-the-blink-of-an-eye-part-2/), 2021). That matches his description of the funders and the methods.
+  - [Dodgson & Raymond 2022, Scientific Reports 12:2076](https://doi.org/10.1038/s41598-022-05972-8) is one paper from the project. Its participants were 26 University of Birmingham students and its acknowledgements thank the four banks only, so don't cite it as naming him.
+  - Neither source names the US site or individual staff. No publication naming him or UC Davis was found on 2026-11-14 (search scope, not a finding).
+- **Site page:** [/work/, item 18](https://mazzeleczzare.com/work/) says Sci Rep 12:2076 acknowledges him. **Fix:** replace that line with his LinkedIn sentence above.
+- **Status:** `first-hand` for his role; `verified-third-party` that the study, its funders and its methods are as he describes.
 - **Roles:** RESEARCH, SEC.
+
+### R5. Teaching assistant, Psychology of Emotion
+
+- **Claim (his LinkedIn):** "Teaching Assistant for Psychology of Emotions with Dr. Bliss-Moreau."
+- **Resume wording:** "Teaching Assistant, Psychology of Emotion (Prof. Eliza Bliss-Moreau), UC Davis." The [catalog](https://catalog.ucdavis.edu/departments-programs-degrees/psychology/psychology-bs/) lists the course as PSC 154, "Psychology of Emotion".
+- **Status:** `first-hand` (his LinkedIn).
+- **Roles:** RESEARCH, WRITING.
+
+### R6. Remote-learning video guides (COVID-19)
+
+- **Claim (his LinkedIn):** at the start of the pandemic he scripted, recorded, edited and distributed video guides for students and faculty on setting up access to university servers and classrooms.
+- **Resume wording:** "Scripted, recorded and edited video guides that helped students and faculty set up remote access to university servers and classrooms at the start of COVID-19."
+- **Status:** `first-hand` (his LinkedIn). If any of the videos are still online, add the link here.
+- **Roles:** DEVREL, WRITING.
+
+### R7. Online research and EEG/eye-tracking data for machine-learning models
+
+- **Claim (his LinkedIn):** he ran large-scale online research through SONA and Amazon Mechanical Turk (including data validation), and collected and analysed EEG/ERP and eye-tracking data "which was used to train early convolutional neural networks and (deep) machine learning models on predicting affective reactivity to emotional stimuli."
+- **Resume wording:** "Ran large-scale online studies (SONA, Amazon Mechanical Turk) and collected EEG/ERP and eye-tracking data used to train early CNN and deep-learning models predicting affective reactivity."
+- **Evidence searched (2026-11-14):** Kiat, Luck et al. 2022, [Developmental Science 25:e13155](https://doi.org/10.1111/desc.13155), links eye movements to a CNN, but it uses infant data from another lab; its acknowledgements name only grants, so it isn't this work. No paper or preprint on CNN prediction of affective reactivity from this group was found under any of his names. That is search scope, not a finding.
+- **Status:** `first-hand` (his LinkedIn).
+- **Roles:** RESEARCH.
 
 ### R3. Degree
 
-- **Claim:** B.S. in Quantitative Psychology with a neuroscience emphasis, UC Davis, 2020.
+- **Claim:** B.S. in Quantitative Psychology with a neuroscience emphasis, UC Davis, 2020. He confirmed the degree is a B.S. (2026-11-14).
 - **Resume wording:** "B.S., Quantitative Psychology (neuroscience emphasis), University of California, Davis, 2020." Keep this exact form. Don't write "Quantitative Psychology and Neuroscience", which reads as two majors.
 - **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "B.S., Quantitative Psychology". Agrees. [/work/, item 21](https://mazzeleczzare.com/work/) says "Quantitative Psychology & Neuroscience", which disagrees.
-- **LinkedIn:** his Education section labels the degree "Bachelor of Applied Science - BASc, Quantitative Psychology", 2018 to 2020. A public snapshot of the profile (2026-11-05) also showed a second UC Davis entry, "Bachelor's of Science Psychometrics and Quantitative Psychology". The [UC Davis catalog](https://catalog.ucdavis.edu/departments-programs-degrees/psychology/psychology-bs/) lists the major as "Psychology, Bachelor of Science" with a Quantitative Emphasis (current catalog, read 2026-11-14; the 2020 wording may differ). "B.S." matches the catalog; "BASc" doesn't. The exact field and emphasis wording should come from his diploma or transcript, since a background check compares against those.
+- **LinkedIn:** labels it "Bachelor of Applied Science - BASc". That label is the one to fix (see the gaps list). The [UC Davis catalog](https://catalog.ucdavis.edu/departments-programs-degrees/psychology/psychology-bs/) lists the psychology major as a Bachelor of Science with a Quantitative Emphasis.
 - **Regents Scholar:** his LinkedIn About section says "Regents Scholar" (in the Luck Lab sentence); his site says it too. UC Davis gives the [Regents Scholarship](https://financialaid.ucdavis.edu/scholarships/campus/awards/regents) to selected first-year and third-year (transfer) students. No public recipient list was found.
-- **Status:** `first-hand` (his site and LinkedIn). No public record of the degree or the Regents award was found on 2026-11-14; both are normally confirmed by background check or transcript.
+- **Status:** `first-hand`, B.S. confirmed by him. Degrees and the Regents award are normally confirmed by transcript or background check.
 - **Roles:** all.
 
 ---
@@ -390,8 +416,8 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 ### A1. UC Davis scholarships (2018 to 2019)
 
-- **Claim:** At UC Davis he received the Osher Reentry Scholarship (2019), the Cal Aggie Alumni Association Leadership Scholarship (2018) and the Gerald Lewis Armour and Jane Billiou Armour Scholarship (2018).
-- **Resume wording:** "Osher Reentry Scholar (2019); Cal Aggie Alumni Association Leadership Scholarship and Armour Scholarship (2018)."
+- **Claim:** At UC Davis he received the Osher Reentry Scholarship (2019), the Cal Aggie Alumni Association Leadership Scholarship (2018) and the Gerald Lewis Armour and Jane Billiou Armour Scholarship for Outstanding Contributions to Student Equity (2018).
+- **Resume wording:** "Osher Reentry Scholar (2019); Cal Aggie Alumni Association Leadership Scholarship and Armour Scholarship for Outstanding Contributions to Student Equity (2018)."
 - **Evidence:** his LinkedIn profile, Education, UC Davis entry (Activities and societies). What each award is:
   - [Osher Reentry Scholarship](https://trc.ucdavis.edu/services/scholarship/reentry): about eight to ten $5,000 awards a year to reentry students aged 25 to 50 with a 3.25 GPA.
   - [CAAA Leadership Scholarship](https://alumni.ucdavis.edu/scholarships/caaa-leadership-scholarship): for entering freshmen and transfers, selected by alumni readers.
