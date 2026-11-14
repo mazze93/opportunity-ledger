@@ -80,7 +80,7 @@ Add by hand, once the date is checked: the **Pitch to Publisher** webinar, where
 These stay on his site and in the proof bank as evidence, not as works:
 
 - The Charbonneau dissertation and the Luck Lab page thank or list him; neither is his authored work.
-- Clear as Mud: his confirmed role is scheduling and organizing guests (proof bank D1). It belongs in the mudstack employment description, not as a work, until episodes he hosted are named.
+- Clear as Mud: he hosted the show and booked its guests. Put it in the mudstack employment description now. Each episode he hosted can go on ORCID as a work once its title and date are listed; ORCID has no podcast type, so use "Other".
 - Dodgson & Raymond 2022 (Scientific Reports): the paper doesn't name him (proof bank R4).
 - The 80.lv team-byline pieces (D2): which ones he wrote isn't shown.
 
@@ -124,4 +124,4 @@ His site is the source of truth, so each of these should get a page or a line th
 - The three CVE credits have no page of their own; /work/ lists them in one entry. A per-advisory page, or anchors on /work/, would give ORCID and resumes a site link.
 - The four mudstack webinars he hosted (proof bank D3) aren't on the site.
 - Two standalone essays, The Architecture of Forgetting and What We Don't Know Yet, are static pages outside the blog collection, so they aren't in the scholarly feed and won't get Rogue Scholar DOIs. Moving them into the blog collection, or giving them Zenodo DOIs, fixes that.
-- Where the site disagrees with the outside record (podcast hosting and episode count, the Luck Lab title, the banknote paper, the degree wording on /work/), the proof bank lists each one. Fix the site before a DOI freezes a claim.
+- Where the site disagrees with the outside record (the podcast episode count, the Luck Lab title, the banknote paper, the degree wording on /work/), the proof bank lists each one. Fix the site before a DOI freezes a claim.
