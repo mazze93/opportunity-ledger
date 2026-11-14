@@ -80,7 +80,7 @@ Add by hand, once the date is checked: the **Pitch to Publisher** webinar, where
 These stay on his site and in the proof bank as evidence, not as works:
 
 - The Charbonneau dissertation and the Luck Lab page thank or list him; neither is his authored work.
-- Clear as Mud: he hosted the show and booked its guests. Put it in the mudstack employment description now. Each episode he hosted can go on ORCID as a work once its title and date are listed; ORCID has no podcast type, so use "Other".
+- Clear as Mud: he hosted the show and booked its guests. Put it in the mudstack employment description now. Each episode he hosted can go on ORCID as a work once its title and date are listed.
 - Dodgson & Raymond 2022 (Scientific Reports): the paper doesn't name him (proof bank R4).
 - The 80.lv team-byline pieces (D2): which ones he wrote isn't shown.
 
