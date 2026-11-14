@@ -18,9 +18,10 @@ This file holds only what a stranger can check from a public link. Personal hist
 - **Evidence:** links a reader can open.
 - **Date:** when the thing happened.
 - **Site page:** his page for it on [mazzeleczzare.com](https://mazzeleczzare.com/), the intended source of truth, and whether it agrees with the outside record. A disagreement is a fix for the site or for the record, not a verdict.
-- **Status:** one of three.
+- **Status:** one of four.
   - `verified-third-party`: a source he doesn't control confirms it (GitHub Advisory Database, Snyk, a publisher's byline).
   - `verified-artifact`: his own public repository, release or site shows the thing exists and does what the wording says. It proves the work exists, not how anyone rates it.
+  - `first-hand`: his own account of his own work, stated on his site. Use it as written. Outside links that support it are listed; no outside source has to repeat it for it to stand.
   - `unverified`: no public source confirms it. The reason is given. Don't use it until it moves up.
 - **Roles:** SEC (Security Engineer), DEVREL (Developer Relations), WRITING (technical writing and content), RESEARCH (AI evals and safety research).
 
@@ -237,19 +238,19 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 ## 4. DevRel, content and community
 
-### D1. Clear as Mud podcast (mudstack)
+### D1. Clear as Mud podcast, producer and host (mudstack)
 
-- **Claim:** mudstack ran the Clear as Mud podcast from 2022 into August 2023. In a December 2022 mudstack webinar he says he handles "a lot of the scheduling and organization" for it.
-- **Resume wording now:** "Scheduled and organized guests for mudstack's Clear as Mud podcast, 2022 to 2023." Add "hosted" with named episodes once the episodes are confirmed (see Status).
+- **Claim:** He produced and hosted mudstack's Clear as Mud interview series, 27 episodes, 2022 to 2023, and owned guest research, outreach, scheduling, production and distribution.
+- **Resume wording:** "Produced and hosted 27 episodes of Clear as Mud, mudstack's interview series with game, XR and creative-technology leaders (2022 to 2023)."
 - **Evidence:**
-  - [mudstack 2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA) (his own words on the podcast role, on mudstack's channel)
-  - [Spotify: Clear as Mud](https://open.spotify.com/show/50eMqYFskikUzz4EuoYTyf) (37 episodes, 2022 to 2023-08-10)
-  - Dave Branco's LinkedIn post of 2023-05-23 says he invited Branco onto the show (`link held`).
-- **Site page:** [/work/, item 16](https://mazzeleczzare.com/work/) and [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/). **Disagrees with the outside record.** The site says he "founded and hosted" the show, with 26+ or 27 episodes. His own LinkedIn post announcing the job on 2022-10-18 already links "our weekly podcast", and E1 to E32 open with Graham Waltrip as host.
-- **Status:**
-  - `verified-third-party`: the show, and his scheduling and organizing role.
-  - Hosting is not yet confirmed from a recording. Checked 2026-11-14: YouTube captions for E1 to E32 (E6 and E13 have none) all open with Graham Waltrip as host. Episodes 33 to 37 (Branco, Fadness, Adkins, Tucciarone, Balgam; May to August 2023) are audio only on Spotify and couldn't be played from here. This is the limit of the search, not a finding that he didn't host.
-  - Fix: name the episodes he hosted, or a timestamp where he says "I'm your host".
+  - [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/), his site: "Produced and hosted seven webinars and 27 episodes of the Clear as Mud interview series; owned speaker research and outreach, scheduling, run-of-show, live production, and post-event distribution." This is the primary source.
+  - [Spotify: Clear as Mud](https://open.spotify.com/show/50eMqYFskikUzz4EuoYTyf), the show itself (37 episodes, last on 2023-08-10). The last five episodes: [Dave Branco, 2023-05-22](https://open.spotify.com/episode/1343ucXtyEdQz97zdnBZoq), [Dan Fadness, 2023-06-08](https://open.spotify.com/episode/31syWj1lZrHDtN1lUs9BZR), [James Adkins, 2023-07-11](https://open.spotify.com/episode/4xVn00xHcWLpQR4oQb7HXc), [David Tucciarone, 2023-07-27](https://open.spotify.com/episode/3eocwPu6kDZX0Ewevy8Rtl), [Vani Balgam, 2023-08-10](https://open.spotify.com/episode/0iWbRR6HlEQm20F0Fmq05S).
+  - [mudstack 2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA): he describes his podcast role in his own words.
+  - Dave Branco's LinkedIn post of 2023-05-23 says he invited Branco onto the show, and his reply thanks Branco "for coming on the podcast" (`link held`).
+- **Date:** 2022 to 2023.
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/) (primary, above). [/work/, item 16](https://mazzeleczzare.com/work/) words it differently: "Founded and hosted", "twenty-six-plus episodes across Spotify and Apple". **One fix for the site:** "Founded". His LinkedIn post of 2022-10-18, announcing the job, already links "our weekly podcast", so the show was running when he joined. "Produced and hosted", as on the Research Program Operations page, avoids the question.
+- **Status:** `first-hand` for producing and hosting, from his site. `verified-third-party` that the show exists and that he booked its guests.
+- **Not reached from here (2026-11-14), so no audio timestamps yet:** the show's RSS feed. It isn't in Apple's podcast directory under this name, its old Podbean site now redirects to a sign-in page, Spotify shows no transcript, and the audio hosts couldn't be reached from this workspace. If the feed URL turns up (Spotify for Creators shows it in the show settings), timestamps of "and I'm your host Mazze" can be added here.
 - **Roles:** DEVREL, WRITING.
 
 ### D2. mudstack articles on 80.lv (team byline)
@@ -269,17 +270,17 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 ### D3. mudstack webinars and livestream (host)
 
-- **Claim:** He hosted or introduced mudstack webinars from December 2022 to May 2023.
-- **Resume wording:** "Hosted mudstack's webinar and livestream series for game artists and studios (2022 to 2023), including a publisher-pitching panel, the 2023 product roadmap and a livestream with director HaZ Dulull."
+- **Claim:** He produced and hosted seven mudstack webinars and livestreams, December 2022 to May 2023.
+- **Resume wording:** "Produced and hosted seven mudstack webinars and livestreams for game artists and studios (2022 to 2023), including a publisher-pitching panel, the 2023 product roadmap and a livestream with director HaZ Dulull."
 - **Evidence (mudstack's YouTube channel, captions read 2026-11-14):**
   - [2023 roadmap webinar, 2022-12-06](https://www.youtube.com/watch?v=UJ6ugcnTooA): he introduces himself and hosts.
   - [Pitch to Publisher](https://www.youtube.com/watch?v=rdsgB1Uoi-Q): "I'll be your host".
   - [Feedback-flow product update](https://www.youtube.com/watch?v=CzWYQMeyjTM): a colleague thanks him for the introduction.
   - Livestream with HaZ Dulull, 2023-05-26: he hosts (`link held`).
-- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Produced and hosted seven webinars". Four are confirmed; see Status.
+- **Site page:** [Research Program Operations](https://mazzeleczzare.com/work/research-program-operations/): "Produced and hosted seven webinars". Agrees.
 - **Status:**
-  - `verified-third-party`: four sessions, each with his role shown in the recording.
-  - Not yet confirmed: "seven webinars". The Get Hired webinar (2023-04-28) has a host who isn't named in the part of the captions read, and the Q&A sessions were run by others. mudstack's blog write-up of Get Hired is bylined to him (`link held`).
+  - `first-hand`: seven webinars, from his site.
+  - `verified-third-party`: four of them, each with his role shown in the recording. The other three weren't matched to a recording on 2026-11-14; mudstack's blog write-up of the Get Hired webinar (2023-04-28) is bylined to him (`link held`).
 - **Roles:** DEVREL.
 
 ### D4. mudstack Content and Community Manager
@@ -399,7 +400,7 @@ These may be true. Only private records show them, so this public file doesn't l
 - **Forks as his work:** arxiv-auth, obsidian-minimal, and the Zed extensions fork. A Zed theme of his counts only once the upstream merge is checked.
 - **kintsugi or macprobe as public projects.** No public repositories by those names exist.
 - **Sales, revenue, installs or users** for the skills store or any tool.
-- **"Hosted 27 episodes" or "seven webinars"** until the episodes and sessions are named (see D1 and D3). "Hosted mudstack webinars" is fine now.
+- **"Founded" Clear as Mud.** Say "produced and hosted" (see D1).
 - **"About 60 researchers annually"** or a San Jose State site for the ERP Boot Camp (see R2).
 - **"Acknowledged in Scientific Reports 12:2076"** (see R4).
 - **ERPLAB contributor** until a public record (release notes, commit, acknowledgement) names him. His site marks it self-reported.
