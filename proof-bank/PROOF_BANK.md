@@ -2,6 +2,8 @@
 title: Proof bank
 description: Every career claim that a public link can back, with the exact wording safe to use on a resume. Resumes and cover letters draw only from here.
 checked: 2026-11-14
+reviewed: 2026-11-15
+review_scope: security credits, AI evaluations, selected releases, hold wording
 tags: [career, claims, resume, devrel, security]
 ---
 
@@ -9,7 +11,7 @@ tags: [career, claims, resume, devrel, security]
 
 Every resume line and cover letter sentence should trace to an entry here. If it isn't here, it doesn't go out.
 
-This file holds only what a stranger can check from a public link. Personal history, private repositories and contact details stay out of it, as [[application-loop]] already requires for the claim bank.
+This bank distinguishes publicly inspectable artifacts, third-party credits and first-hand work history. Private records may substantiate employment and duties without being published. Contact details, private repositories and employer-internal metrics stay in private application records. See [the application loop](../docs/application-loop.md).
 
 ## How to read an entry
 
@@ -25,7 +27,16 @@ This file holds only what a stranger can check from a public link. Personal hist
   - `unverified`: no public source confirms it. The reason is given. Don't use it until it moves up.
 - **Roles:** SEC (Security Engineer), DEVREL (Developer Relations), WRITING (technical writing and content), RESEARCH (AI evals and safety research).
 
-All statuses were checked on 2026-11-14 unless an entry says otherwise.
+The original inventory was checked on 2026-11-14. A scoped review on 2026-11-15 corrected the entries noted below; it did not reverify every entry.
+
+### Claim-level evidence rules
+
+- Assess existence, functionality, attribution, results, distribution and adoption separately. A repository or release proves existence; it does not by itself prove deployed behavior, adoption or security effectiveness.
+- Attach each number to its source, revision and observation date. Release-note test totals are historical reports unless the matching run has been inspected. A workflow file is not a passing run, and a green run proves only its executed assertions.
+- Preserve the scope of first-hand experience. Employment records, work samples and references can substantiate duties privately; lack of a public acknowledgment is not disproof.
+- Record unsuccessful searches as **not located in the stated search**, not as evidence that work did not happen. A hold must name the exact wording it blocks and the evidence that could lift it.
+- Keep severity sources explicit when they differ. Signing claims identify the signed artifact; signature publication and cryptographic verification are separate observations.
+- Public application materials should cite stable commits, releases or dated pages where possible. Reconcile each tailored document against the bank before sending.
 
 ## Name note
 
@@ -43,7 +54,7 @@ The public credits use different forms of one identity. Say so if a reader might
 ### S1. Finder, CVE-2026-59869 (js-yaml, High)
 
 - **Claim:** He found a quadratic CPU-consumption bug in js-yaml's merge-key handling, rated High (CVSS 3.1 base 7.5), affecting 3.x before 3.15.0 and 4.x before 4.3.0.
-- **Resume wording:** "Credited Finder, CVE-2026-59869 (GHSA-52cp-r559-cp3m): High-severity (7.5) denial of service in js-yaml 3.x/4.x, a YAML parser with more than 300 million weekly npm downloads."
+- **Resume wording:** "Credited Finder, CVE-2026-59869 (GHSA-52cp-r559-cp3m): quadratic-time denial of service in js-yaml 3.x/4.x; GitHub rates it High (7.5), Snyk High (8.7)."
 - **Evidence:**
   - [GHSA-52cp-r559-cp3m](https://github.com/advisories/GHSA-52cp-r559-cp3m) (credits: `mazze93`, Finder)
   - [Snyk SNYK-JS-JSYAML-17900054](https://security.snyk.io/vuln/SNYK-JS-JSYAML-17900054) (credit: Mazze LeCzzare Frazer; Snyk score 8.7, high)
@@ -54,17 +65,17 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Status:** `verified-third-party`.
 - **Roles:** SEC, RESEARCH.
 
-### S2. Finder, CVE-2026-59868 (js-yaml 5.x, Moderate)
+### S2. Finder, CVE-2026-59868 (js-yaml 5.x; ratings differ)
 
 - **Claim:** He found the same class of bug in js-yaml 5.0.0 to 5.1.0, rated Moderate (CVSS 3.1 base 5.3) by GitHub.
-- **Resume wording:** "Credited Finder, CVE-2026-59868 (GHSA-g796-fgmg-93mv): denial of service in js-yaml 5.x."
+- **Resume wording:** "Credited Finder, CVE-2026-59868 (GHSA-g796-fgmg-93mv): quadratic-time denial of service in js-yaml 5.x when merge keys are enabled; GitHub rates it Moderate (5.3), Snyk High (8.2)."
+- **Combined wording (S1 + S2):** "Credited Finder on CVE-2026-59868 and CVE-2026-59869, quadratic-time denial-of-service vulnerabilities in js-yaml; Snyk rates them High, 8.2 and 8.7 respectively."
 - **Evidence:**
   - [GHSA-g796-fgmg-93mv](https://github.com/advisories/GHSA-g796-fgmg-93mv) (credits: `mazze93`, Finder)
 - **Date:** 2026.
 - **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). Agrees (Moderate 5.3).
-- **Status:** `verified-third-party` for the GitHub credit and the Moderate rating.
-  - Unverified: a Snyk credit for this CVE. No Snyk advisory page naming him was found.
-  - Snyk's [js-yaml 5.1.0 package page](https://security.snyk.io/package/npm/js-yaml/5.1.0) rates a 5.x merge-key issue high, but that page carries no credit. Say "Moderate" or give no severity.
+- **Additional evidence:** [Snyk SNYK-JS-JSYAML-17900092](https://security.snyk.io/vuln/SNYK-JS-JSYAML-17900092) explicitly credits Mazze LeCzzare Frazer, identifies this CVE and rates it High (8.2).
+- **Status:** `verified-third-party` for both credits and the source-specific ratings; checked 2026-11-15. The original Snyk hold was a search failure, not missing credit.
 - **Roles:** SEC, RESEARCH.
 
 ### S3. Analyst, CVE-2026-53550 (js-yaml, Moderate)
@@ -85,8 +96,8 @@ The public credits use different forms of one identity. Say so if a reader might
   - [security.txt](https://securepride.org/.well-known/security.txt)
 - **Site page:** [/project/secure-pride/](https://mazzeleczzare.com/project/secure-pride/). The site gives two titles: "Founder & Exec. Director" on /work/ and "Founder & Editor-in-Chief" on [/work/research-program-operations/](https://mazzeleczzare.com/work/research-program-operations/). Pick one.
 - **Status:** `verified-artifact` that the site, security.txt and policy link exist.
-  - Unverified: his name as founder or policy author. No fetched page named him. The /about and /security-policy pages did not load through the fetcher.
-  - Fix: add a founder line to /about, or a credit line to the policy page.
+  - `first-hand`: founder and policy publication, stated on his public project and research-operations pages. Inaccessible /about and /security-policy fetches do not refute his role or authorship.
+  - Hold the exact executive title and founding date where application sources conflict until the governing or employment record resolves them. A public founder credit can improve attribution but is not a prerequisite for first-hand work history.
 - **Roles:** SEC, DEVREL.
 
 ---
@@ -95,16 +106,18 @@ The public credits use different forms of one identity. Say so if a reader might
 
 ### E1. js-yaml DoS eval (Inspect AI)
 
-- **Claim:** He built an Inspect AI task that measures whether a model can produce inputs triggering the js-yaml merge-key slowdown. It has 10 samples, one per js-yaml version, and two scoring modes, amplification and growth. The pipeline is verified; no model results are published.
-- **Resume wording:** "Built an Inspect AI evaluation for parser denial-of-service: 10 version-pinned samples, two scorers (amplification and growth-rate), harness checks passing in CI. Pipeline verified; no model results published yet."
+- **Claim:** He built an Inspect AI task with 10 version-pinned samples. Amplification scoring executes the submitted payload; growth scoring measures a checked-in reference generator and scores the model verdict, not its generated exploit. Scripted-model integration checks exercise both paths. No real-model results are published.
+- **Resume wording:** "Built a 10-version Inspect AI evaluation combining execution-based DoS payload scoring with verdict scoring against measured reference scaling; scripted-model integration checks and passing CI. No real-model results published."
 - **Evidence:**
   - [mazze93/js-yaml-dos-eval](https://github.com/mazze93/js-yaml-dos-eval) (MIT, CI)
   - README: growth slopes of 1.90 (r² 0.999), 1.90 (r² 1.000) and 2.05 (r² 0.995) on js-yaml 3.15.0, 4.3.0 and 5.2.0, over 64 to 512 KiB inputs
-  - The local harness ran 71 of 71 checks passing on 2026-11-14, and the `test` CI job on main passed the same day.
+  - Original inventory reports 71/71 local harness checks on 2026-11-14. This scoped review did not rerun them.
+  - [Scorer implementation](https://github.com/mazze93/js-yaml-dos-eval/blob/ebdb373b0d512426d1b4f98d7be1ad7231679b07/js_yaml_dos_eval/task.py) and [scripted-model integration checks](https://github.com/mazze93/js-yaml-dos-eval/blob/ebdb373b0d512426d1b4f98d7be1ad7231679b07/tests/test_pipeline.py) distinguish payload and reference-generator paths.
+  - [CI run 43555535628](https://github.com/mazze93/js-yaml-dos-eval/actions/runs/43555535628) concluded success at `ebdb373b0d512426d1b4f98d7be1ad7231679b07` (inspected 2026-11-15).
 - **Date:** growth scoring merged 2026-11-13.
 - **Site page:** none found. Add it to /work/ or /studio/.
 - **Status:** `verified-artifact`.
-- **Do not say:** that any model was evaluated, or any score. The README says it makes no claim about model performance.
+- **Hold:** real-model performance, comparative results or exploit-generation success across all samples. Scripted test models have been used for integration checks. Growth scores are verdict scores backed by reference measurements. Lift real-model-result holds only with attributable run artifacts and metric definitions.
 - **Roles:** RESEARCH, SEC.
 
 ### E2. Prompt-injection detection gate and adversary runner
@@ -115,13 +128,15 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/aletheia](https://github.com/mazze93/aletheia)
   - [mazze93/apatea](https://github.com/mazze93/apatea)
 - **Site page:** [/project/aletheia/](https://mazzeleczzare.com/project/aletheia/). Agrees.
-- **Status:** `verified-artifact`. No detection rates are claimed.
+- **Status:** `verified-artifact`. No detection rates are claimed. Aletheia defaults to shadow mode; enforcement is opt-in and its detector has documented lexical limits.
+- **Repair wording:** "Investigated and repaired Unicode case-folding evasions across Python and TypeScript prompt-injection detectors; added mutation regressions and checks against unsafe boundary matching."
+- **Repair evidence:** [merged PR #21](https://github.com/mazze93/aletheia/pull/21), merge `8c726448acd0138b71117a02ac6f78ad86e46250`, documents 116 blinded mutations across 15 seeds and before/after regressions. These counts describe that finding, not general detector recall. Default-mode impact was suppressed recorded scores; enforcement-mode impact could be bypass. Checked 2026-11-15.
 - **Roles:** RESEARCH, SEC.
 
 ### E3. MAESTRO in Practice
 
-- **Claim:** He wrote a 42-page report applying the MAESTRO agentic-AI threat-modelling framework to 12 case studies, conducted in June 2026.
-- **Resume wording:** "Author, MAESTRO in Practice: a 42-page applied threat-modelling study of 12 agentic-AI case studies (self-published, 2026)."
+- **Claim:** He compiled a 42-page comparative review of 12 documented applications of MAESTRO to agentic-AI threat modelling. The essay describes compilation in June 2026; it does not establish that he conducted the underlying case studies.
+- **Resume wording:** "Authored MAESTRO in Practice, a self-published, 42-page comparative review of 12 documented applications of MAESTRO to agentic-AI threat modelling (2026)."
 - **Evidence:** [mazzeleczzare.com/blog/maestro-in-practice](https://mazzeleczzare.com/blog/maestro-in-practice/).
 - **Site page:** [MAESTRO in Practice (PDF)](https://mazzeleczzare.com/papers/maestro-in-practice.pdf) and [/project/maestro/](https://mazzeleczzare.com/project/maestro/). Agrees.
 - **Status:** `verified-artifact` (self-published, not peer-reviewed).
@@ -130,7 +145,7 @@ The public credits use different forms of one identity. Say so if a reader might
 ### E4. AI behaviour research programme
 
 - **Claim:** He runs a public research site with an ethics page and a method audit. Its own text says the smoke releases show technical execution only, not findings.
-- **Resume wording:** "Running an independent AI-behaviour research programme with published ethics and method-audit pages; preregistered pilot under way."
+- **Resume wording:** "Designed a preregistered pilot on false-authority propagation across agent sessions; implemented scenarios, baseline conditions, scoring and protocol-freeze guards. Trials pending."
 - **Evidence:**
   - [research.mazzeleczzare.com](https://research.mazzeleczzare.com/)
   - [ethics](https://research.mazzeleczzare.com/ethics.html)
@@ -139,7 +154,7 @@ The public credits use different forms of one identity. Say so if a reader might
   - [mazze93/authority-without-assertion](https://github.com/mazze93/authority-without-assertion) (pilot stage, preregistration)
 - **Site page:** [/work/, item 04](https://mazzeleczzare.com/work/). Agrees; the site itself says a smoke test is not a completed pilot.
 - **Status:** `verified-artifact`.
-- **Do not say:** "findings", "results" or "published research". There are none yet.
+- **Hold:** completed empirical pilot, measured treatment effects or model-performance findings. The authority-without-assertion README says no trials have run and some condition adapters remain unbuilt (checked 2026-11-15). Published protocols and methodological writing may be described as such.
 - **Roles:** RESEARCH.
 
 ---
@@ -154,27 +169,29 @@ The public credits use different forms of one identity. Say so if a reader might
   - Repo access is limited to what the user ticks on the GitHub App install screen.
   - Tests run on workerd.
   - v1.1.0 ships a cosign-signed toolchain image with SBOM and SLSA provenance.
-- **Resume wording:** "Built and released github-mcp-gateway (v1.1.0): a remote MCP server on Cloudflare Workers with 24 GitHub tools, OAuth 2.1 (PKCE, DCR, CIMD), per-repository access via GitHub App installation, tests on workerd, and a cosign-signed release with SBOM and SLSA provenance."
+- **Resume wording:** "Built a Cloudflare Workers MCP gateway with GitHub App repository scoping and OAuth/PKCE; published a toolchain container image with cosign signing, SBOM and SLSA provenance."
 - **Evidence:**
   - [mazze93/github-mcp-gateway](https://github.com/mazze93/github-mcp-gateway) (tags v1.0.0, v1.1.0; CI, CodeQL, deploy and release workflows)
   - [Glama listing](https://glama.ai/mcp/servers/mazze93/github-mcp-gateway)
 - **Date:** v1.1.0 released 2026-09-13.
 - **Site page:** none found. Add it to /work/.
 - **Status:** `verified-artifact`. The Glama listing is third-party, but it only indexes the repo.
-- **Do not say:** a test count. "66 tests" no longer matches; the suite now has about 90 test call sites. Count with the test runner before using any number.
+- **Signing scope:** [v1.1.0 release](https://github.com/mazze93/github-mcp-gateway/releases/tag/v1.1.0) identifies the toolchain image, digest `sha256:11eed98d91e5e8f177e58097e6aff1dc8a77ff76c674cf4ce4d711b0019dd19b`; the image builds/deploys the Worker and does not run the gateway. Release notes report signing and attestations; this review did not cryptographically verify them.
+- **Hold:** a signed running gateway or a current test count. Count with the test runner at a pinned revision before using a number.
 - **Roles:** SEC, DEVREL.
 
 ### T2. Stratum
 
 - **Claim:** He built and released Stratum, a project ledger with 16 contract invariants, implemented twice (a Python reference and a TypeScript port). Its v0.5.0 release is signed, and it has a live site.
-- **Resume wording:** "Built and released Stratum (v0.5.0): a project-state ledger with 16 contract invariants implemented in both Python and TypeScript, with CI, CodeQL and a signed release."
+- **Resume wording:** "Built and released Stratum, an evidence-gated decision ledger with Python/TypeScript implementations, 16 contract invariants and replay validation."
 - **Evidence:**
   - [mazze93/stratum](https://github.com/mazze93/stratum) (tags v0.4.0, v0.5.0)
   - [stratum.mazzeleczzare.com](https://stratum.mazzeleczzare.com/)
 - **Date:** v0.5.0 released 2026-11-13.
 - **Site page:** [/work/, item 01](https://mazzeleczzare.com/work/). Agrees.
 - **Status:** `verified-artifact`.
-  - Unverified: npm (`@stratum-ledger/cli`) and Homebrew availability. The npm page did not load.
+  - **Distribution hold:** the current [README](https://github.com/mazze93/stratum#try-it) explicitly states the npm publish failed and npm/Homebrew installation remain unavailable (checked 2026-11-15). The failed npm-page fetch alone would not establish this.
+  - **Release scope:** [v0.5.0](https://github.com/mazze93/stratum/releases/tag/v0.5.0) publishes a bundle with a Sigstore file. This review did not cryptographically verify it. The README says the bundle predates ratification and identity fixes on main; do not imply it contains those fixes.
 - **Roles:** DEVREL, SEC.
 
 ### T3. Stele
@@ -183,10 +200,11 @@ The public credits use different forms of one identity. Say so if a reader might
   - It watches inputs and extraction responses with 13 deterministic tripwires (prompt injection, authority impersonation, hidden instructions, credential leaks, schema drift).
   - Every tripwire writes to an audit trail.
   - The v1.2.0 release notes report 147 app tests and 56 core tests passing in hosted CI.
-- **Resume wording:** "Built and released Stele (v1.2.0): 13 deterministic tripwires for prompt injection, impersonation, hidden instructions and credential leaks, each logged to an audit trail; 200+ tests passing in CI."
+- **Resume wording:** "Built and released Stele v1.2.0 with deterministic input tripwires, integrity-state controls and audit logging; release verification reports 147 app tests and 56 core tests."
 - **Evidence:**
   - [mazze93/stele](https://github.com/mazze93/stele) (tags v1.0.0 to v1.2.0)
   - [stele.mazzeleczzare.com](https://stele.mazzeleczzare.com/)
+- **Scope:** [v1.2.0 release](https://github.com/mazze93/stele/releases/tag/v1.2.0), tagged revision `0539a58dab64055e65162f1285df7581ff5d6064`, reports the test totals. This review inspected the release record, not a fresh execution. Lexical/Unicode checks do not establish universal injection prevention or general semantic-drift detection.
 - **Date:** v1.2.0 released 2026-10-17.
 - **Site page:** [/work/, item 02](https://mazzeleczzare.com/work/) and [/project/stele/](https://mazzeleczzare.com/project/stele/). Agrees.
 - **Status:** `verified-artifact`.
@@ -407,7 +425,10 @@ All are `verified-artifact` for existence only. Their own pages say they aren't 
 
 ### W3. "The Break Is the Record" (September 2026)
 
-- **Status:** unverified. It is listed on a draft resume, but no public link was checked. Add the link here, then use it.
+- **Claim:** He self-published the essay on 2026-09-23.
+- **Resume wording:** "Author, The Break Is the Record, a self-published essay on verification pipelines and preserving corrections (September 2026)."
+- **Evidence:** [essay and byline](https://mazzeleczzare.com/blog/the-break-is-the-record/), checked 2026-11-15.
+- **Status:** `verified-artifact` for publication and byline. This does not independently validate the underlying factual narrative; the original no-link hold is lifted.
 - **Roles:** WRITING.
 
 ---
@@ -457,16 +478,17 @@ These may be true. Only private records show them, so this public file doesn't l
 
 ## Do not claim
 
-- **CVE-2026-84375 (GHSA-2883-xcg3-v3hh) or GHSA-r3ph-w7gj-g6xm.** Neither advisory has a credits section, so nothing ties him to them.
+- **Credited discoverer of CVE-2026-84375 (GHSA-2883-xcg3-v3hh) or GHSA-r3ph-w7gj-g6xm:** no attribution record was located in the original advisory review. Missing credits do not prove he did no related work. Lift only with a maintainer acknowledgment, attributable report, commit or other record supporting the exact role.
 - **Finder on CVE-2026-53550.** He is a credited Analyst; another researcher reported it.
-- **"Snyk HIGH" on CVE-2026-59868.** GitHub rates it Moderate, and no Snyk credit was found.
-- **Any model result from js-yaml-dos-eval.** None has been published.
-- **Authorship of apple-foundation-models-py.** It is Ben Tucker's project on PyPI; his account holds a fork with 16 of his commits against Ben Tucker's 69. Say "contributor" only after an upstream merge is confirmed.
-- **Forks as his work:** arxiv-auth, obsidian-minimal, and the Zed extensions fork. A Zed theme of his counts only once the upstream merge is checked.
-- **kintsugi or macprobe as public projects.** No public repositories by those names exist.
+- **Unattributed severity on CVE-2026-59868:** name Snyk for High (8.2) or GitHub for Moderate (5.3). The previous prohibition on Snyk High is withdrawn; see S2.
+- **Real-model performance results from js-yaml-dos-eval:** no such published run was located; the repository explicitly distinguishes scripted-model checks. Do not describe growth-mode verdict scores as generated-payload success.
+- **Original authorship or accepted upstream contribution to apple-foundation-models-py:** it is Ben Tucker's project; his account holds a fork. Safe scope: "Developed changes in a fork of Ben Tucker's Apple Foundation Models Python bindings", with a specific commit/diff before naming capabilities. An upstream merge is needed for "accepted upstream contribution", not for authorship of changes in his own fork. A 2026-11-15 upstream PR search for author `mazze93` returned no results; that search does not rule out other contribution records.
+- **Original authorship of forked projects:** arxiv-auth, obsidian-minimal and the Zed extensions fork. Original changes may be claimed as work in a fork when linked to the exact diff; accepted upstream work requires an upstream acceptance record.
+- **kintsugi or macprobe as publicly inspectable projects:** no public repositories by those names were located in the original search. Lift with an accessible artifact; absence from that search is not proof of nonexistence.
 - **Sales, revenue, installs or users** for the skills store or any tool.
 - **"Founded" Clear as Mud.** Say "produced and hosted" (see D1).
 - **"About 60 researchers annually"** or a San Jose State site for the ERP Boot Camp (see R2).
 - **"Acknowledged in Scientific Reports 12:2076"** (see R4).
-- **ERPLAB contributor** until a public record (release notes, commit, acknowledgement) names him. His site marks it self-reported.
+- **ERPLAB software contributor:** hold this specific attribution until supported by an attributable change or maintainer record. His first-hand wording, "Supported dissemination of EEG/ERP methodology and documentation for the open-source ERPLAB Toolbox", may be used as work history; private work samples or a supervisor can substantiate it without public acknowledgment.
 - **Any title he didn't hold.** Check every template header and footer before sending.
+
