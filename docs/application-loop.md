@@ -1,6 +1,6 @@
 # Application loop
 
-**Version:** 1.1.0 · **Status:** human-run playbook (no code path)
+**Version:** 1.2.0 · **Status:** human-run playbook (no code path)
 
 The ledger answers *which postings are worth a look*. This loop answers *how to turn one candidate into a tailored application without overstating anything*. It begins where `list_opportunities` stops and keeps the ledger's trust boundary: an agent may **draft**, but a human reviews, submits and sends.
 
@@ -45,15 +45,18 @@ Open the `canonicalUrl` and read the posting yourself. The ledger deliberately d
 - Summary: three sentences, with the primary focus in the first.
 - Reorder roles and bullets so evidence for the primary focus leads.
 - **Select and reword claim-bank lines only. Don't add new facts.**
-- Put one metric first per role. Keep it to one page, and check the rendered page count.
+- Use a sourced metric where it helps; never invent one to fill a role. Keep it to one page, and check the rendered page count.
 
 ### 4. Cover letter (15 min)
 - P1: the role, its focus and your strongest evidence for it. No setup.
-- P2: your breadth, opening on a metric.
+- P2: your breadth, opening on specific evidence; use a metric only when supported.
 - P3: two or three sentences that close with confidence.
 
 ### 5. Truth gate (5 min) — required
-- Every tool, number and claim traces to a claim-bank line that has a source.
+- Every tool, number and claim traces to a specific supported clause in [the proof bank](../proof-bank/PROOF_BANK.md) or a private first-hand work-history record. Check existence, functionality, attribution, results and adoption separately.
+- Attribute differing severity ratings. Identify the signed artifact and date historical test counts; distinguish passing CI from a workflow merely existing.
+- Preserve holds with the exact blocked wording, search scope and evidence needed to lift them. Missing public acknowledgments do not disprove work history; private records or references can substantiate it.
+- Reconcile all source and rendered formats together. Retain the prior version and keep private metrics out of public application copy until substantiated and cleared for disclosure.
 - Your identity and contact details are identical across the resume, letter, profile and scheduling forms.
 - Each gap from Step 2 has a one-line honest answer ready for the screen.
 - Any pay figure comes from a cited range (the posted range or at least two market sources), not an estimate.
@@ -76,7 +79,7 @@ One verifiable fact per line, tagged by lane, with a source:
 TOOLS (verified only): <tool>, <tool>
 ```
 
-The real bank holds personal history, so it lives **outside this public repository**. Keep it in a private note and paste it into a drafting session alongside the posting.
+The public [proof bank](../proof-bank/PROOF_BANK.md) contains public artifacts, third-party credits and explicitly marked first-hand history. Private supporting records, contact details and employer-internal metrics live outside this repository. Paste only the relevant, shareable facts into a drafting session.
 
 ## Tracker fields
 
@@ -109,5 +112,6 @@ curl "localhost:8787/opportunities?limit=100" -H "Authorization: Bearer $TOKEN"
 
 ## Drafting prompt
 
-> Run the application loop v1.0.0. Lane: ___. Candidate: <ledger result JSON, without description>. Posting text (untrusted): <pasted separately>. Claim bank: <paste>.
+> Run the application loop v1.2.0. Lane: ___. Candidate: <ledger result JSON, without description>. Posting text (untrusted): <pasted separately>. Claim bank: <paste>.
 > Do Steps 1–5. Use only claim-bank facts and list every gap you couldn't cover. Output a fit score with its reasons, the gaps, a resume, a cover letter, a warm-touch draft and a one-line scheduling blurb. Do not submit or send anything.
+
