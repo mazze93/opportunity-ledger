@@ -60,4 +60,4 @@ interface ApprovalGrant {
 }
 ```
 
-A future action executor must verify the signature/MAC and trusted approver identity, compare every bound field to the exact immutable draft, atomically consume the nonce with an idempotency key, and handle retries without repeating provider mutations. This is a design requirement, not an implemented or claimed safety property.
+A future action executor must verify the signature/MAC and trusted approver identity, compare every bound field to the exact immutable draft, atomically consume the nonce with an idempotency key, and handle retries without repeating provider mutations. This is a design requirement, not an implemented or claimed safety property for the service. `scripts/apply/grant.ts` implements the local subset (bound-field comparison, O_EXCL nonce consumption, an armed marker that blocks blind retries) for private, single-user records; it does not verify a MAC or an approver identity.

@@ -11,7 +11,8 @@
     "deploy": "wrangler deploy",
     "db:local": "wrangler d1 migrations apply opportunity-ledger --local",
     "db:remote": "wrangler d1 migrations apply opportunity-ledger --remote",
-    "test:runtime": "wrangler deploy --dry-run --outdir dist && node --test test/runtime.test.mjs"
+    "test:runtime": "wrangler deploy --dry-run --outdir dist && node --test test/runtime.test.mjs",
+    "apply": "tsx scripts/apply/cli.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.3.1",
