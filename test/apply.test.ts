@@ -96,6 +96,31 @@ test('the yes stops covering the submit when files, answers, gates or time chang
   await assert.rejects(checkGrant(late, recDir, new Date('2026-12-03T00:00:00Z')), /expired/);
 });
 
+test('a yes for one role does not cover a different posting', async () => {
+  const { dir, src } = workspace();
+  const recDir = recordDir(dir, 'acme-sec');
+  const t0 = new Date('2026-11-18T00:00:00Z');
+  const rec = await issueGrant(readyRecord(dir, src), approval, 14, t0);
+  const posting = { ...rec.posting };
+  assert.equal(rec.stage, 'granted');
+
+  const refused = async (next: ApplicationRecord['posting']) => {
+    rec.posting = next;
+    await assert.rejects(arm(rec, recDir, t0), /changed since the yes/);
+    assert.equal(existsSync(join(recDir, 'submit.armed')), false, 'a refused arm must not record a Submit click');
+    assert.equal(existsSync(join(recDir, `nonce.${rec.grant?.nonce}.consumed`)), false);
+    assert.equal(rec.stage, 'granted');
+  };
+
+  // The stored grant target has no url; the url is bound only through the draft digest.
+  await refused({ ...posting, url: 'https://jobs.example.com/other-role/2' });
+  await refused({ ...posting, opportunityId: 'other-role' });
+  await refused({ ...posting, provider: 'greenhouse-job-board' });
+
+  rec.posting = posting;
+  await checkGrant(rec, recDir, t0);
+});
+
 // ---------- the retry guard ----------
 test('a restart after clicking Submit cannot click again until the outcome is seen', async () => {
   const { dir, src } = workspace();
