@@ -28,8 +28,8 @@ Each kind of work has one route. Taking two routes for the same work makes dupli
 
 Done once. Each step is his to take; none is automatic.
 
-1. **Blog:** merge the `scholarly/rogue-scholar-feed` pull request in mazze-leczzare-blog. It adds the CC BY 4.0 notice, the full-text `/feed.json` with his ORCID iD, and citation metadata on every post.
-2. **Rogue Scholar:** submit the join form ([rogue-scholar.org](https://rogue-scholar.org), "Register your blog") with `https://mazzeleczzare.com/feed.json` as the feed. Draft answers are in the private checklist.
+1. **Blog:** merge the `scholarly/rogue-scholar-feed` pull request in mazze-leczzare-blog. It adds the CC BY 4.0 notice, the full-text `/feed.json` with his ORCID iD, and citation metadata on every post. Done: merged 2026-11-14 (#223).
+2. **Rogue Scholar:** submit the join form ([rogue-scholar.org](https://rogue-scholar.org), "Register your blog"). The form asks for name, email, ORCID iD, a description, the homepage URL, seven yes/no eligibility statements, and an OpenAlex field and subfield; Rogue Scholar finds the feed from the homepage. Submitted 2026-11-18 with his approval (field Computer Science, subfield Artificial Intelligence). Submissions are reviewed once a month, and the name and homepage are posted in the Rogue Scholar Slack for two weeks of comments. No DOIs until it is accepted. The form does not ask for a feed URL, and the homepage advertises two feeds: `/feed.json` (full text, held posts excluded) and `/rss.xml` (summaries only, every post including held ones). Rogue Scholar's FAQ does not say which it picks, so tell them to use `/feed.json` when they reply, and check the feed URL on the blog's Rogue Scholar page once it is listed.
 3. **Crossref permission:** after the first DOI is registered, ORCID sends an inbox notice asking to let Crossref update the record. Grant it once.
 4. **DataCite permission:** at [commons.datacite.org](https://commons.datacite.org), sign in with ORCID, authorise DataCite, and enable ORCID Auto-Update.
 5. **Zenodo:** connect GitHub and switch on each repository listed in `orcid/CHECKLIST.md` section 8.

@@ -138,4 +138,4 @@ His site is the source of truth, so each of these should get a page or a line th
 - The three CVE credits have no page of their own; /work/ lists them in one entry. A per-advisory page, or anchors on /work/, would give ORCID and resumes a site link.
 - The four mudstack webinars he hosted (proof bank D3) aren't on the site.
 - Two standalone essays, The Architecture of Forgetting and What We Don't Know Yet, are static pages outside the blog collection, so they aren't in the scholarly feed and won't get Rogue Scholar DOIs. Moving them into the blog collection, or giving them Zenodo DOIs, fixes that.
-- Where the site disagrees with the outside record (the podcast episode count, the Luck Lab title, the banknote paper, the degree wording on /work/), the proof bank lists each one. Fix the site before a DOI freezes a claim.
+- Where the site disagrees with the outside record (the Luck Lab title, the banknote paper, the degree wording on /work/), the proof bank lists each one. Fix the site before a DOI freezes a claim.
