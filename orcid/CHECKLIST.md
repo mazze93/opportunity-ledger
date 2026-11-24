@@ -11,7 +11,12 @@ Record: [orcid.org/0009-0005-9661-4780](https://orcid.org/0009-0005-9661-4780). 
 
 ## What the record holds now
 
-Read from ORCID's public JSON on 2026-11-14.
+Read from ORCID's public JSON on 2026-11-14. Updated 2026-11-24 after the approved entries were saved; read back from the signed-in editor that day:
+
+- Websites: 6. Works: 6 (the five below plus securepride.org). Employment: Secure Pride, Founder. Education: UC Davis B.S. 2018 to 2020; Butte College 2015 to 2018. Distinctions: all 6.
+- Still open: mudstack employment (needs his city and the exact title wording), the UC Davis job split, Pitch to Publisher.
+
+The table below is the 2026-11-14 starting point.
 
 | Section | Now |
 |---|---|
@@ -35,10 +40,10 @@ Read from ORCID's public JSON on 2026-11-14.
 
 ORCID: Websites & social links > Edit.
 
-- [ ] `https://mazzeleczzare.com` (name it "Website")
-- [ ] `https://mazzeleczzare.com/work/` ("Work and evidence")
-- [ ] `https://research.mazzeleczzare.com` ("Research")
-- [ ] `https://github.com/mazze93` ("GitHub")
+- [x] `https://mazzeleczzare.com` (name it "Website")
+- [x] `https://mazzeleczzare.com/work/` ("Work and evidence")
+- [x] `https://research.mazzeleczzare.com` ("Research")
+- [x] `https://github.com/mazze93` ("GitHub")
 
 ## 3. Keywords (optional)
 
@@ -46,7 +51,7 @@ The 11 keywords stand. Three would match the record once the works below are in:
 
 ## 4. Employment
 
-- [ ] **Secure Pride:** add the role `Founder`. No public page names him as founder yet (proof bank S4). Adding a founder line to securepride.org/about closes that gap.
+- [x] **Secure Pride:** add the role `Founder`. No public page names him as founder yet (proof bank S4). Adding a founder line to securepride.org/about closes that gap.
 - [ ] **UC Davis:** the current entry merges two jobs and puts the second job's title on the first. Replace it with two entries once the months are settled from offer letters or HR records (the resumes disagree; see the private gaps file):
   - Lab Manager Assistant, Luck Lab, Center for Mind and Brain. Proof: Luck Lab alumni page (proof bank R1).
   - Junior Specialist, Bliss-Moreau Lab. Proof: Luck Lab alumni page; Charbonneau dissertation acknowledgements, UC Davis 2024 (R1).
@@ -56,10 +61,10 @@ The 11 keywords stand. Three would match the record once the works below are in:
 
 Source for this section: his LinkedIn education section (screenshot, 2026-11-14) and his site.
 
-- [ ] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020. He confirmed the degree is a B.S. (2026-11-14). LinkedIn shows "Bachelor of Applied Science - BASc", so LinkedIn may want the same fix.
-- [ ] **Butte College (add):** Psychology, 2015 to 2018.
+- [x] **UC Davis:** change the degree text to `B.S., Quantitative Psychology (neuroscience emphasis)`. Keep 2018 to 2020. He confirmed the degree is a B.S. (2026-11-14). LinkedIn shows "Bachelor of Applied Science - BASc", so LinkedIn may want the same fix.
+- [x] **Butte College (add):** Psychology, 2015 to 2018.
 
-### Distinctions (ORCID: Distinctions > + Add)
+### Distinctions (ORCID: Distinctions > + Add) (all 6 saved 2026-11-24)
 
 | Distinction | Organization | Year |
 |---|---|---|
@@ -78,14 +83,16 @@ Three routes, so nothing is entered twice. ORCID groups duplicates only by DOI, 
 
 1. **Blog essays: automatic.** Rogue Scholar registers a Crossref DOI for each post in `mazzeleczzare.com/feed.json`, with his ORCID iD in the metadata. After the first one, ORCID sends an inbox notice asking him to let Crossref update the record. One yes covers every later essay. Don't import essays by hand.
 2. **Software releases: automatic, once Zenodo is on.** See section 8.
-3. **Everything else: `works.bib`.** Import it once (Works > + Add > Add BibTeX):
-   - CVE-2026-59869, Finder (GHSA-52cp-r559-cp3m)
-   - CVE-2026-59868, Finder (GHSA-g796-fgmg-93mv)
-   - CVE-2026-53550, Analyst (GHSA-h67p-54hq-rp68)
-   - Intentional Fragility: Accountable Forgetting in Local-First AI (paper PDF on his site)
-   - mudstack 2023 roadmap webinar, host (2022-12-06)
+3. **Everything else: `works.bib`.** Imported 2026-11-24 (Works > + Add > Add BibTeX). The file holds no comments or `note` fields, because ORCID's importer stops with "Token mismatch" on them; the notes live here instead:
+   - CVE-2026-59869, Finder (GHSA-52cp-r559-cp3m). Credited Finder (GitHub account mazze93); High, CVSS 3.1 7.5; also credited by Snyk, SNYK-JS-JSYAML-17900054.
+   - CVE-2026-59868, Finder (GHSA-g796-fgmg-93mv). Moderate, CVSS 3.1 5.3.
+   - CVE-2026-53550, Analyst (GHSA-h67p-54hq-rp68). One of five credited analysts; another researcher reported it.
+   - Intentional Fragility: Accountable Forgetting in Local-First AI (paper PDF on his site; landing page mazzeleczzare.com/intentional-fragility/). Not in the blog feed, so no Rogue Scholar DOI. If it later gets a Zenodo DOI, delete this hand entry so it isn't listed twice.
+   - mudstack 2023 roadmap webinar, host (2022-12-06). Title copied exactly from YouTube on 2026-11-18.
 
-   Then check each imported work's type: CVEs as Other, the paper as Report or Preprint, the webinar as Lecture or speech.
+   Types as saved: CVEs as Other, the paper as Report, the webinar as "Talk, interview, podcast or speech" (ORCID has no Lecture type).
+
+   Not in `works.bib`, on purpose: blog essays (Rogue Scholar DOIs, route 1), software releases (Zenodo DOIs, route 2; `software.bib` is the fallback), and acknowledgements (not authored works).
 
 Add by hand, once the date is checked: the **Pitch to Publisher** webinar, where he says "I'll be your host" ([YouTube](https://www.youtube.com/watch?v=rdsgB1Uoi-Q), proof bank D3). Its upload date couldn't be read from here.
 
