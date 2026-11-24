@@ -14,7 +14,7 @@ Record: [orcid.org/0009-0005-9661-4780](https://orcid.org/0009-0005-9661-4780). 
 Read from ORCID's public JSON on 2026-11-14. Updated 2026-11-24 after the approved entries were saved; read back from the signed-in editor that day:
 
 - Websites: 6. Works: 6 (the five below plus securepride.org). Employment: Secure Pride, Founder. Education: UC Davis B.S. 2018 to 2020; Butte College 2015 to 2018. Distinctions: all 6.
-- Still open: mudstack employment (needs his city and the exact title wording), the UC Davis job split, Pitch to Publisher.
+- Still open, his to add by hand (2026-11-24): mudstack employment (details in section 4), the UC Davis job split, Pitch to Publisher.
 
 The table below is the 2026-11-14 starting point.
 
@@ -55,7 +55,7 @@ The 11 keywords stand. Three would match the record once the works below are in:
 - [ ] **UC Davis:** the current entry merges two jobs and puts the second job's title on the first. Replace it with two entries once the months are settled from offer letters or HR records (the resumes disagree; see the private gaps file):
   - Lab Manager Assistant, Luck Lab, Center for Mind and Brain. Proof: Luck Lab alumni page (proof bank R1).
   - Junior Specialist, Bliss-Moreau Lab. Proof: Luck Lab alumni page; Charbonneau dissertation acknowledgements, UC Davis 2024 (R1).
-- [ ] **mudstack (add):** `Content and Community Manager`. Proof: mudstack's own blog bio (proof bank D4). His site gives October 2022 to November 2023; confirm the months from his records before entering. Add "Content Writer" to the description only if he wants the earlier title shown (his October 2022 post and the March 2023 80.lv byline use it).
+- [ ] **mudstack (add, by hand):** `Community and Content Manager`, Savannah, Georgia, US, 2022-10 to 2023-11. Title and city confirmed by him 2026-11-24; he is adding this entry himself. Proof: mudstack's own blog bio (proof bank D4). Add "Content Writer" to the description only if he wants the earlier title shown (his October 2022 post and the March 2023 80.lv byline use it).
 
 ## 5. Education and qualifications
 
