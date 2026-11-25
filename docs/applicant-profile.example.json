@@ -1,0 +1,16 @@
+{
+  "_comment": "Copy to APPLICATIONS_DIR/profile.json (private, outside this repo) and fill in. Standing form values used by `apply plan`. Per-application screening answers go in that application's answers file and override these. Leave voluntary demographic questions out so they stay blank.",
+  "fields": {
+    "Legal name": "<legal name>",
+    "Preferred name": "<preferred name>",
+    "Email": "<email>",
+    "Phone": "<phone>",
+    "Location": "<City, State, Country as the location typeahead lists it>",
+    "LinkedIn": "https://www.linkedin.com/in/<handle>",
+    "Website": "https://<site>",
+    "Authorized to work in the United States": "<Yes|No>",
+    "Requires visa sponsorship": "<Yes|No>",
+    "SMS updates": "No",
+    "How did you hear about us": "Company website / careers page"
+  }
+}

@@ -85,7 +85,7 @@ The MCP endpoint uses the **same static bearer secret** as the REST API. It is s
 
 The API never returns raw description text. Raw ATS descriptions remain **untrusted data** even after markup removal. If a future agent consumes one, pass it through a separate untrusted-content boundary such as Temenos and keep it out of system/developer instructions. Markup removal does not stop plaintext prompt injection.
 
-The service does not submit applications or send messages. If those actions are added later, each action must require an immutable draft digest, action, target, subject, expiry, and single-use nonce bound by a verified grant. A workflow retry must not re-submit the action. Do not assume Praxis-Aegis T3 already provides this enforcement.
+The service does not submit applications or send messages. The local application runner (`npm run apply`, see [the application loop](docs/application-loop.md#runner)) implements the grant half of this contract on the agent's side for one person's private records: draft digest, target, subject, expiry and a single-use nonce, with an armed marker so a retry cannot re-submit blind. It does not implement a MAC or a verified approver identity. If the service itself gains these actions, each action must require an immutable draft digest, action, target, subject, expiry, and single-use nonce bound by a verified grant. A workflow retry must not re-submit the action. Do not assume Praxis-Aegis T3 already provides this enforcement.
 
 ## Limits and honest claims
 
