@@ -1,7 +1,7 @@
 ---
 title: Proof bank
 description: Every career claim that a public link can back, with the exact wording safe to use on a resume. Resumes and cover letters draw only from here.
-checked: 2026-11-14
+checked: 2026-11-14 (S2 rechecked 2026-11-22)
 tags: [career, claims, resume, devrel, security]
 ---
 
@@ -54,17 +54,17 @@ The public credits use different forms of one identity. Say so if a reader might
 - **Status:** `verified-third-party`.
 - **Roles:** SEC, RESEARCH.
 
-### S2. Finder, CVE-2026-59868 (js-yaml 5.x, Moderate)
+### S2. Finder, CVE-2026-59868 (js-yaml 5.x)
 
-- **Claim:** He found the same class of bug in js-yaml 5.0.0 to 5.1.0, rated Moderate (CVSS 3.1 base 5.3) by GitHub.
-- **Resume wording:** "Credited Finder, CVE-2026-59868 (GHSA-g796-fgmg-93mv): denial of service in js-yaml 5.x."
+- **Claim:** He found the same class of bug in js-yaml 5.0.0 to 5.1.0. GitHub rates it Moderate (CVSS 3.1 base 5.3); Snyk rates it High (8.2) and credits him.
+- **Resume wording:** "Credited Finder, CVE-2026-59868 (GHSA-g796-fgmg-93mv; SNYK-JS-JSYAML-17900092): denial of service in js-yaml 5.x, rated High (8.2) by Snyk." When giving a severity, name the scorer: Snyk High 8.2, or GitHub Moderate 5.3.
 - **Evidence:**
-  - [GHSA-g796-fgmg-93mv](https://github.com/advisories/GHSA-g796-fgmg-93mv) (credits: `mazze93`, Finder)
+  - [GHSA-g796-fgmg-93mv](https://github.com/advisories/GHSA-g796-fgmg-93mv) (credits: `mazze93`, Finder; Moderate 5.3)
+  - [Snyk SNYK-JS-JSYAML-17900092](https://security.snyk.io/vuln/SNYK-JS-JSYAML-17900092) (credit: Mazze LeCzzare Frazer; Snyk score 8.2, High; checked 2026-11-22)
+  - Both Snyk pages (this one and S1's) also show "0.0" in a severity widget beside the score. Treat it as a display glitch, not the rating.
 - **Date:** 2026.
-- **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). Agrees (Moderate 5.3).
-- **Status:** `verified-third-party` for the GitHub credit and the Moderate rating.
-  - Unverified: a Snyk credit for this CVE. No Snyk advisory page naming him was found.
-  - Snyk's [js-yaml 5.1.0 package page](https://security.snyk.io/package/npm/js-yaml/5.1.0) rates a 5.x merge-key issue high, but that page carries no credit. Say "Moderate" or give no severity.
+- **Site page:** [/work/, Vulnerability Research](https://mazzeleczzare.com/work/). It says Moderate 5.3, GitHub's score. Agrees; it can add Snyk's High 8.2.
+- **Status:** `verified-third-party` for both credits and both ratings. The Snyk credit was found on 2026-11-22 under his full name; the 2026-11-14 pass missed it.
 - **Roles:** SEC, RESEARCH.
 
 ### S3. Analyst, CVE-2026-53550 (js-yaml, Moderate)
@@ -459,7 +459,7 @@ These may be true. Only private records show them, so this public file doesn't l
 
 - **CVE-2026-84375 (GHSA-2883-xcg3-v3hh) or GHSA-r3ph-w7gj-g6xm.** Neither advisory has a credits section, so nothing ties him to them.
 - **Finder on CVE-2026-53550.** He is a credited Analyst; another researcher reported it.
-- **"Snyk HIGH" on CVE-2026-59868.** GitHub rates it Moderate, and no Snyk credit was found.
+- **A severity on CVE-2026-59868 without its scorer.** Snyk rates it High (8.2), GitHub Moderate (5.3). Say which (see S2).
 - **Any model result from js-yaml-dos-eval.** None has been published.
 - **Authorship of apple-foundation-models-py.** It is Ben Tucker's project on PyPI; his account holds a fork with 16 of his commits against Ben Tucker's 69. Say "contributor" only after an upstream merge is confirmed.
 - **Forks as his work:** arxiv-auth, obsidian-minimal, and the Zed extensions fork. A Zed theme of his counts only once the upstream merge is checked.
