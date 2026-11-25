@@ -17,3 +17,8 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run test:runtime
+      - name: Desk typecheck, tests and bundle (no deploy)
+        run: |
+          npx tsc -p desk/tsconfig.json
+          node --experimental-strip-types --no-warnings --test desk/test/*.test.ts
+          npx wrangler deploy -c desk/wrangler.jsonc --dry-run --outdir dist/desk
